@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="./images/icon-192x192.png">
+    <title>Telegram</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cantarell:wght@400;700&family=Fira+Sans:wght@300;400;500;600;700&family=Oxygen:wght@300;400;700&family=Roboto:wght@300;400;500;700&family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./slick/slick-1.8.1/slick/slick-theme.css">
+    <link rel="stylesheet" href="./slick/slick-1.8.1/slick/slick.css">
+    <link rel="stylesheet" href="./slick/slick-1.8.1/slick/slick-theme.css">
+    <link rel="stylesheet" href="./font-awesome/fontawesome-free-5.15.4-web/css/all.min.css">
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/responsive.css" />
+    <script src="./jquery/jquery.js"></script>
+  </head>
+
+  <body>
+    <!-- main -->
+    <main id="UiLoader" >
+      <div id="Main">
+        <!-- left -->
+        <section id="LeftColumn">
+          <div class="Transition push-slide">
+            <div class="Transition__slide--active">
+              <div id="LeftColumn-main">
+                <!-- header -->
+                <div class="LeftMainHeader">
+                  <div id="LeftMainHeader" class="left-header">
+                    <!-- dropdown -->
+                    <div class="DropdownMenu ">
+                      <button type="button" class="Button smaller translucent round has-ripple" aria-label="Open menu" title="Open menu">
+                        <div class="animated-menu-icon"></div>
+                        <div class="ripple-container"></div>
+                      </button>
+                      <div class="Menu no-selection compact">
+                        <div class="bubble menu-container custom-scroll top left with-footer opacity-transition fast" style="transform-origin: left top;">
+                          <div role="button" tabindex="0" class="MenuItem compact">
+                            <i class="fas fa-bookmark"></i>
+                            Saved Messages
+                          </div>
+                          <div role="button" tabindex="0" class="MenuItem compact">
+                            <i class="fas fa-folder-minus"></i>
+                            <span class="menu-item-name">Archived Chats</span>
+                          </div>
+                          <div role="button" tabindex="0" class="MenuItem compact">
+                            <i class="fas fa-user"></i>
+                            Contacts
+                          </div>
+                          <div role="button" tabindex="0" class="MenuItem compact">
+                            <i class="fas fa-cog"></i>
+                            Settings
+                          </div>
+                          <div role="button" tabindex="0" class="MenuItem compact">
+                            <i class="fas fa-moon"></i>
+                            <span class="menu-item-name">Night Mode</span>
+                            <label class="Switcher no-animation" title="Enable night mode" for="darkmode">
+                              <input type="checkbox" id="darkmode">
+                              <span class="widget"></span>
+                            </label>
+                          </div>
+                          <div role="button" tabindex="0" class="MenuItem compact">
+                            <i class="fas fa-question-circle"></i>
+                            Telegram Features
+                          </div>
+                          <a tabindex="0" class="MenuItem compact" href="#">
+                            <i class="fas fa-bug"></i>
+                            Report Bug
+                          </a>
+                          <a tabindex="0" class="MenuItem compact" href="#">
+                            <i class="fab fa-kaggle" data-char="k"></i>
+                            Switch to K Version
+                          </a>
+                          <a tabindex="0" class="MenuItem compact" href="#">
+                            <i class="fab fa-wikipedia-w" data-char="w"></i>
+                            Switch to Old Version
+                          </a>
+                          <div class="footer">Telegram WebZ 1.40.1</div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- end dropdown -->
+
+                    <!-- serch input -->
+                    <div class="SearchInput">
+                      <input id="telegram-search-input" type="text" dir="auto" placeholder="Search" class="form-control" autocomplete="off">
+                     <i class="fas fa-search"></i>
+                    </div>
+                    <!-- end serch input -->
+                  </div>
+                </div>
+                <!-- end header -->
+
+                <!-- zoom fade -->
+                <div class="Transition zoom-fade">
+                  <!--  -->
+                  <div class="Transition___slide">
+                    <div class="chat-list custom-scroll">
+                      <!-- item -->
+                      <div class="chat-item selected">
+                        <!-- status -->
+                        <div class="chat-status">
+                          <img src="./images/3.jpg" alt="" class="chat-img">
+                        </div>
+                        <!-- end status -->
+                        <!-- info -->
+                        <div class="chat-info">
+                          <!-- title -->
+                          <div class="chat-title">
+                            <h3 class="chat-heading">Nguyen Van A</h3>
+                            <div class="LastMesageMeta">
+                              <div class="MessageOutgoingStatus">
+                                <i class="fas fa-check"></i>
+                              </div>
+                              <span class="chat-time">Mon</span>
+                            </div>
+                          </div>
+                          <!-- end title -->
+                          <!-- subtitle -->
+                          <div class="chat-subtitle">
+                            <p class="last-message fix-text" >Outgoing Call (1 min) Outgoing Call (1 min) Outgoing Call (1 min) Outgoing Call (1 min) Outgoing Call (1 min)</p>
+                          </div>
+                          <!-- end subtitle -->
+                        </div>
+                        <!-- end info -->
+                      </div>
+                      <!-- item -->
+                      <!-- item -->
+                      <div class="chat-item">
+                        <!-- status -->
+                        <div class="chat-status">
+                          <img src="./images/3.jpg" alt="" class="chat-img">
+                        </div>
+                        <!-- end status -->
+                        <!-- info -->
+                        <div class="chat-info">
+                          <!-- title -->
+                          <div class="chat-title">
+                            <h3 class="chat-heading">Nguyen Van A</h3>
+                            <div class="LastMesageMeta">
+                              <div class="MessageOutgoingStatus">
+                                <i class="fas fa-check"></i>
+                              </div>
+                              <span class="chat-time">Mon</span>
+                            </div>
+                          </div>
+                          <!-- end title -->
+                          <!-- subtitle -->
+                          <div class="chat-subtitle">
+                            <p class="last-message fix-text" >Outgoing Call (1 min) Outgoing Call (1 min) Outgoing Call (1 min) Outgoing Call (1 min) Outgoing Call (1 min)</p>
+                          </div>
+                          <!-- end subtitle -->
+                        </div>
+                        <!-- end info -->
+                      </div>
+                      <!-- item -->
+                      <!-- item -->
+                      <div class="chat-item">
+                        <!-- status -->
+                        <div class="chat-status">
+                          <img src="./images/3.jpg" alt="" class="chat-img">
+                        </div>
+                        <!-- end status -->
+                        <!-- info -->
+                        <div class="chat-info">
+                          <!-- title -->
+                          <div class="chat-title">
+                            <h3 class="chat-heading">Nguyen Van A</h3>
+                            <div class="LastMesageMeta">
+                              <div class="MessageOutgoingStatus">
+                                <i class="fas fa-check"></i>
+                              </div>
+                              <span class="chat-time">Mon</span>
+                            </div>
+                          </div>
+                          <!-- end title -->
+                          <!-- subtitle -->
+                          <div class="chat-subtitle">
+                            <p class="last-message fix-text" >Outgoing Call (1 min) Outgoing Call (1 min) Outgoing Call (1 min) Outgoing Call (1 min) Outgoing Call (1 min)</p>
+                          </div>
+                          <!-- end subtitle -->
+                        </div>
+                        <!-- end info -->
+                      </div>
+                      <!-- item -->
+                    </div>
+                  </div>
+                  <!--  -->
+                  <!--  -->
+                  <div class="Transition___slide active">
+                    <!-- tablist -->
+                    <div class="TabList no-selection no-scrollbar">
+                      <div class="Tab">
+                        <span>Chats</span>
+                      </div>
+                      <div class="Tab">
+                        <span>Media</span>
+                      </div>
+                      <div class="Tab">
+                        <span>Links</span>
+                      </div>
+                      <div class="Tab">
+                        <span>Files</span>
+                      </div>
+                      <div class="Tab">
+                        <span>Music</span>
+                      </div>
+                      <div class="Tab">
+                        <span>Voice</span>
+                      </div>
+                    </div>
+                    <!-- end tablist -->
+                    <div class="RecentContacts custom-scroll">
+                      <div class="Tab-content">
+                        <!-- pane -->
+                        <div class="Tab-pane">
+                          <!-- top section-->
+                          <div class="recent-top">
+                            <!-- item -->
+                            <div class="recent-top__item">
+                              <!-- status -->
+                              <div class="recent-top__img">
+                                <img src="./images/3.jpg" alt="" class="chat-img">
+                              </div>
+                              <!-- end status -->
+                              <!-- info -->
+                              <div class="recent-top__name">
+                                <h3>Nguyen Van A</h3>
+                              </div>
+                              <!-- end info -->
+                            </div>
+                            <!-- item -->
+                          </div>
+                          <!-- end top section -->
+                          <!-- second section -->
+                          <div class="recent-second">
+                            <div class="recent-second__heading">
+                              <h3>Recent</h3>
+                              <i class="fas fa-times recent-second__close"></i>
+                            </div>
+                            <div class="recent-second__content">
+                              <!-- item -->
+                            <div class="chat-item">
+                              <!-- status -->
+                              <div class="chat-status">
+                                <img src="./images/3.jpg" alt="" class="chat-img">
+                              </div>
+                              <!-- end status -->
+                              <!-- info -->
+                              <div class="chat-info">
+                                <!-- title -->
+                                <div class="chat-title">
+                                  <h3 class="chat-heading">Nguyen Van A</h3>
+                                  <div class="LastMesageMeta">
+                                    <div class="MessageOutgoingStatus">
+                                      <i class="fas fa-check"></i>
+                                    </div>
+                                    <span class="chat-time">Mon</span>
+                                  </div>
+                                </div>
+                                <!-- end title -->
+                                <!-- subtitle -->
+                                <div class="chat-subtitle">
+                                  <p class="last-message fix-text" >last seen recenly</p>
+                                </div>
+                                <!-- end subtitle -->
+                              </div>
+                              <!-- end info -->
+                            </div>
+                            <!-- item -->
+                            <!-- item -->
+                            <div class="chat-item">
+                              <!-- status -->
+                              <div class="chat-status">
+                                <img src="./images/3.jpg" alt="" class="chat-img">
+                              </div>
+                              <!-- end status -->
+                              <!-- info -->
+                              <div class="chat-info">
+                                <!-- title -->
+                                <div class="chat-title">
+                                  <h3 class="chat-heading">Nguyen Van A</h3>
+                                  <div class="LastMesageMeta">
+                                    <div class="MessageOutgoingStatus">
+                                      <i class="fas fa-check"></i>
+                                    </div>
+                                    <span class="chat-time">Mon</span>
+                                  </div>
+                                </div>
+                                <!-- end title -->
+                                <!-- subtitle -->
+                                <div class="chat-subtitle">
+                                  <p class="last-message fix-text" >last seen recenly</p>
+                                </div>
+                                <!-- end subtitle -->
+                              </div>
+                              <!-- end info -->
+                            </div>
+                            <!-- item -->
+                            <!-- item -->
+                            <div class="chat-item">
+                              <!-- status -->
+                              <div class="chat-status">
+                                <img src="./images/3.jpg" alt="" class="chat-img">
+                              </div>
+                              <!-- end status -->
+                              <!-- info -->
+                              <div class="chat-info">
+                                <!-- title -->
+                                <div class="chat-title">
+                                  <h3 class="chat-heading">Nguyen Van A</h3>
+                                  <div class="LastMesageMeta">
+                                    <div class="MessageOutgoingStatus">
+                                      <i class="fas fa-check"></i>
+                                    </div>
+                                    <span class="chat-time">Mon</span>
+                                  </div>
+                                </div>
+                                <!-- end title -->
+                                <!-- subtitle -->
+                                <div class="chat-subtitle">
+                                  <p class="last-message fix-text" >last seen recenly</p>
+                                </div>
+                                <!-- end subtitle -->
+                              </div>
+                              <!-- end info -->
+                            </div>
+                            <!-- item -->
+                            </div>
+                          </div>
+                          <!-- end second section -->
+                        </div>
+                        <!-- end pane -->
+                        <!-- pane -->
+                        <div class="Tab-pane">
+                          hello1111111111111111
+                        </div>
+                        <!-- end pane -->
+                        <!-- pane -->
+                        <div class="Tab-pane">
+                          hello22
+                        </div>
+                        <!-- end pane -->
+                        <!-- pane -->
+                        <div class="Tab-pane">
+                          hello3333333333333333
+                        </div>
+                        <!-- end pane -->
+                        <!-- pane -->
+                        <div class="Tab-pane">
+                          hello44
+                        </div>
+                        <!-- end pane -->
+                        <!-- pane -->
+                        <div class="Tab-pane">
+                          hello555555555555555
+                        </div>
+                        <!-- end pane -->
+                      </div>
+                    </div>
+                  </div>
+                  <!--  -->
+                </div>
+                <!-- end zoom fade -->
+
+                <!-- new chat -->
+                <div class="NewChatButton">
+                  <button type="button" class="Button FloatingActionButton revealed default primary round" aria-label="Create New Contact" title="Create New Contact" tabindex="-1">
+                    <i class="fas fa-pen"></i>
+                  </button>
+                </div>
+                <!-- end new chat -->
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- end left -->
+        <!-- middle -->
+        <section id="MiddleColumn">test</section>
+        <!-- end middle -->
+      </div>
+      
+    </main>
+    <!-- end main -->
+    <script src="./slick/slick-1.8.1/slick/slick.min.js"></script>
+    <script src="./slick/slick-1.8.1/slick/slick.js"></script>
+    <script src="./font-awesome/fontawesome-free-5.15.4-web/js/fontawesome.min.js"></script>
+    <!-- <script src="./js/ResizeSensor.js"></script>
+    <script src="./js/theia-sticky-sidebar.js"></script> -->
+    <script src="./js/main.js"></script>
+  </body>
+</html>

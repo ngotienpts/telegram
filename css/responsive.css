@@ -1,0 +1,39 @@
+@media (min-width: 600px) {
+  .Chat.selected .ListItem-button, .Chat.selected:hover .ListItem-button {
+    --background-color: var(--color-chat-active) !important;
+    --color-text: var(--color-white);
+    --color-text-meta-colored: var(--color-white);
+    --color-text-meta: var(--color-white);
+    --color-text-secondary: var(--color-white);
+    --color-error: var(--color-white);
+    --color-pinned: var(--color-white);
+  }
+}
+@media (min-width: 57.875em) {
+  #Main {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: 100%;
+  }
+
+  #LeftColumn {
+    max-width: 40vw;
+  }
+}
+@media (min-width: 79.75em) {
+  #Main {
+    position: relative;
+  }
+
+  #LeftColumn {
+    width: 25vw;
+    max-width: 33vw;
+  }
+}
+@media (min-width: 79.75em) and (max-width: 120em) {
+  :root {
+    --right-column-width: 25vw;
+  }
+}
+
+/*# sourceMappingURL=responsive.css.map */
