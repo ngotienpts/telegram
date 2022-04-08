@@ -48,19 +48,30 @@ document.addEventListener("DOMContentLoaded", function () {
         var stateBack = leftColumn.querySelector('.animated-menu-icon');
         var dropdownMenu = leftColumn.querySelector('.DropdownMenu');
         var newChat = leftColumn.querySelector('.NewChatButton');
-
-
-
+        var transitionSlide1 = leftColumn.querySelector('#slide-1');
+        var transitionSlide2 = leftColumn.querySelector('#slide-2');
+        
         searchInput.querySelector('#telegram-search-input').onfocus = function(){
           searchInput.classList.add('has-focus');
-          stateBack.classList.add('state-back')
+          stateBack.classList.add('state-back');
+          if(transitionSlide1 && transitionSlide2){
+            transitionSlide1.classList.remove('active')
+            transitionSlide2.classList.add('active');
+             _this.slideTabList();
+             if(transitionSlide2.matches('.active')){
+              newChat.querySelector('#create-chat').style.display = 'none'
+            }
+
+          }
         }
+
 
 
 
         searchInput.querySelector('#telegram-search-input').onblur = function(){
           if(searchInput.classList.contains('has-focus')){
-            searchInput.classList.remove('has-focus')
+            searchInput.classList.remove('has-focus');
+            newChat.querySelector('#create-chat').style.display = 'block'
           }
         }
 
@@ -69,13 +80,20 @@ document.addEventListener("DOMContentLoaded", function () {
         if(dropdownMenu){
           dropdownMenu.querySelector('.Button.has-ripple').onclick = function(){
             if(stateBack.classList.contains('state-back')){
-              stateBack.classList.remove('state-back')
+              stateBack.classList.remove('state-back');
+              if(transitionSlide1 && transitionSlide2){
+                transitionSlide1.classList.add('active')
+                transitionSlide2.classList.remove('active');
+                 _this.slideTabList();
+    
+              }
             }else {
               dropdownMenu.querySelector('.bubble.menu-container').classList.toggle('open')
               dropdownMenu.querySelector('.bubble.menu-container').classList.toggle('shown')
             }
           }
         }
+
 
 
 
@@ -87,6 +105,9 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       }
 
+
+
+      
 
 
 
@@ -139,7 +160,7 @@ document.addEventListener("DOMContentLoaded", function () {
       // window scroll
       this.windowScroll();
       // slide tablist
-      this.slideTabList();
+      // this.slideTabList();
     },
   };
 

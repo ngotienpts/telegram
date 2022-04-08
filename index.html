@@ -99,7 +99,7 @@
                 <!-- zoom fade -->
                 <div class="Transition zoom-fade">
                   <!--  -->
-                  <div class="Transition___slide">
+                  <div id="slide-1" class="Transition___slide active">
                     <div class="chat-list custom-scroll">
                       <!-- item -->
                       <div class="chat-item selected">
@@ -192,7 +192,7 @@
                   </div>
                   <!--  -->
                   <!--  -->
-                  <div class="Transition___slide active">
+                  <div id="slide-2" class="Transition___slide">
                     <!-- tablist -->
                     <div class="TabList no-selection no-scrollbar">
                       <div class="Tab">
@@ -370,9 +370,27 @@
 
                 <!-- new chat -->
                 <div class="NewChatButton">
-                  <button type="button" class="Button FloatingActionButton revealed default primary round" aria-label="Create New Contact" title="Create New Contact" tabindex="-1">
-                    <i class="fas fa-pen"></i>
-                  </button>
+                  <!-- create chat -->
+                  <div id="create-chat">
+                    <button type="button" class="Button FloatingActionButton revealed default primary round" aria-label="Create New Contact" title="Create New Contact" tabindex="-1">
+                      <i class="fas fa-pen"></i>
+                    </button>
+                    <div class="sub-dropdown-chat">
+                      <div role="button" tabindex="0" class="MenuItem compact">
+                        <i class="fas fa-dice-d20"></i>
+                        New Channel
+                      </div>
+                      <div role="button" tabindex="0" class="MenuItem compact">
+                        <i class="fas fa-layer-group"></i>
+                        <span class="menu-item-name">New group</span>
+                      </div>
+                      <div role="button" tabindex="0" class="MenuItem compact">
+                        <i class="fas fa-user"></i>
+                        New Message
+                      </div>
+                    </div>
+                  </div>
+                  <!-- end create chat -->
                 </div>
                 <!-- end new chat -->
               </div>

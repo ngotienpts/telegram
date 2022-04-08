@@ -1125,7 +1125,6 @@ img {
   text-transform: uppercase;
   flex-shrink: 0;
   position: relative;
-  overflow: hidden;
   transition: background-color 0.15s, color 0.15s;
   text-decoration: none !important;
 }
@@ -1175,6 +1174,7 @@ img {
 
 #LeftMainHeader .animated-menu-icon {
   position: absolute;
+  user-select: none;
 }
 
 #LeftMainHeader .animated-menu-icon,
@@ -1507,6 +1507,7 @@ body:not(.is-ios) .custom-scroll::-webkit-scrollbar {
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   padding: 0.25rem 0;
+  height: auto;
 }
 
 #LeftMainHeader .Menu .bubble {
@@ -1765,6 +1766,36 @@ body:not(.is-ios) .custom-scroll::-webkit-scrollbar {
 .recent-second__close {
   font-size: 1.25rem;
   padding-right: 1rem;
+}
+
+.sub-dropdown-chat {
+  transform-origin: right bottom;
+  background: var(--color-background-compact-menu);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  padding: 0.25rem 0;
+  height: auto;
+  position: absolute;
+  right: 0;
+  bottom: 70px;
+  box-shadow: 0 0.25rem 0.5rem 0.125rem var(--color-default-shadow);
+  border-radius: var(--border-radius-default);
+  opacity: 0;
+  transform: scale(0);
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  -o-transform: scale(0);
+  transition: opacity 0.2s cubic-bezier(0.2, 0, 0.2, 1), transform 0.2s cubic-bezier(0.2, 0, 0.2, 1);
+}
+
+.sub-dropdown-chat.open {
+  opacity: 1;
+  transform: scale(1);
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
 }
 
 /*# sourceMappingURL=style.css.map */
