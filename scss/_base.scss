@@ -39,6 +39,7 @@
   --color-light-shadow: rgba(114,114,114,0.168627);
   --color-green: rgb(0,199,62);
   --color-text-meta-colored: rgb(77,205,94);
+  --color-text-meta-colored2: rgb(77,205,94);
   --color-reply-hover: rgb(244,244,244);
   --color-reply-active: rgb(232,233,233);
   --color-reply-own-hover: rgb(217,245,206);
@@ -141,6 +142,7 @@
   --color-light-shadow: rgba(0,0,0,0.25098);
   --color-green: rgb(135,116,225);
   --color-text-meta-colored: rgb(131,120,219);
+  --color-text-meta-colored2: rgb(255,255,255);
   --color-reply-hover: rgb(39,39,39);
   --color-reply-active: rgb(46,47,47);
   --color-reply-own-hover: rgb(135,117,218);
@@ -888,7 +890,9 @@ img {
 }
 
 
-
+dt, b, strong {
+  font-weight: 500;
+}
 
 
 

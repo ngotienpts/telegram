@@ -30,6 +30,17 @@
     width: 25vw;
     max-width: 33vw;
   }
+  .MessageList {
+      width: 100%;
+      transform: translate3d(0, 0, 0);
+      transition: transform var(--layer-transition);
+  }
+  .MessageList .messages-container {
+    width: calc(100% - var(--right-column-width));
+  }
+  #MiddleColumn .middle-column-footer {
+    width: calc(100% - var(--right-column-width));
+  }
 }
 
 // pc tu 1276px den 1920px

@@ -1,0 +1,93 @@
+#MiddleColumn .middle-column-footer {
+    width: 100%;
+    max-width: var(--messages-container-width);
+    padding: 0 1rem;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    z-index: var(--z-middle-footer);
+    transform: translate3d(0, 0, 0);
+    transition: top 200ms,transform var(--layer-transition);
+}
+#MiddleColumn .middle-column-footer:not(.no-composer) {
+    padding-bottom: env(safe-area-inset-bottom);
+    top: 0;
+}
+#MiddleColumn .middle-column-footer::before {
+    content: "";
+    position: absolute;
+    top: -0.5625rem;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.4) 2%, rgba(255, 255, 255, 0.4) 98%, rgba(255, 255, 255, 0) 100%);
+    opacity: 0;
+    transition: opacity 350ms ease;
+}
+html.theme-dark #MiddleColumn .middle-column-footer::before {
+    background: linear-gradient(90deg, rgba(127, 127, 127, 0) 0%, rgba(127, 127, 127, 0.4) 2%, rgba(127, 127, 127, 0.4) 98%, rgba(127, 127, 127, 0) 100%);
+}
+.Composer {
+    align-items: flex-end;
+}
+.Composer, .MessageSelectToolbar, .messaging-disabled {
+    margin-bottom: 1.25rem;
+}
+.Composer, .MessageSelectToolbar, .unpin-all-button, .join-subscribe-button, .messaging-disabled {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+#message-compose {
+    flex-grow: 1;
+    max-width: calc(100% - 4rem);
+    background: var(--color-background);
+    border-radius: var(--border-radius-messages);
+    border-bottom-right-radius: 0;
+    box-shadow: 0 1px 2px var(--color-default-shadow);
+    position: relative;
+    z-index: 1;
+}
+#MiddleColumn .Composer #message-compose {
+    transform: scaleX(1) translateX(0);
+    transition: transform var(--select-transition),border-bottom-right-radius var(--select-transition);
+}
+#message-compose .svg-appendix {
+    position: absolute;
+    bottom: -0.1875rem;
+    right: -0.551rem;
+    width: 0.5625rem;
+    height: 1.25rem;
+    transition: opacity 200ms;
+    font-size: 1rem !important;
+}
+#message-compose .svg-appendix .corner {
+    fill: var(--color-background);
+}
+.message-input-wrapper {
+    display: flex;
+}
+#MiddleColumn .Composer .message-input-wrapper, #MiddleColumn .Composer::before {
+    opacity: 1;
+    transition: opacity var(--select-transition);
+}
+.message-input-wrapper>.AttachMenu>.Button, .message-input-wrapper>.Button {
+    flex-shrink: 0;
+    background: none !important;
+    width: 3.5rem;
+    height: 3.5rem;
+    margin: 0;
+    padding: 0;
+    align-self: flex-end;
+}
+.message-input-wrapper>.AttachMenu>.Button:not(.faded):not(.activated), .message-input-wrapper>.Button:not(.faded):not(.activated) {
+    color: var(--color-composer-button);
+}
+.MenuItem.compact:hover, .MenuItem.compact:focus, .MenuItem.compact:active {
+    background: var(--color-background-compact-menu-hover);
+    text-decoration: none;
+}
+.Composer>.Button:not(:active):not(:focus):not(:hover) .icon-send {
+    color: var(--color-primary);
+}

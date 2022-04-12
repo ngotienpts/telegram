@@ -10,6 +10,8 @@ document.addEventListener("DOMContentLoaded", function () {
   //  LeftColumn
   var leftColumn = document.querySelector('#LeftColumn');
 
+  var middleColumn =document.querySelector('#MiddleColumn');
+
 
   const app = {
     // su ly cac su kien
@@ -25,16 +27,19 @@ document.addEventListener("DOMContentLoaded", function () {
         
           if (currentTheme === "dark") {
             toggleSwitch.checked = true;
+            document.querySelector('#MiddleColumn').classList.add('theme-dark');
           }
         }
         
         function switchTheme(e) {
           if (e.target.checked) {
             document.documentElement.setAttribute("data-theme", "dark");
+            document.querySelector('#MiddleColumn').classList.add('theme-dark');
             localStorage.setItem("theme", "dark");
           } else {
             document.documentElement.setAttribute("data-theme", "light");
             localStorage.setItem("theme", "light");
+            document.querySelector('#MiddleColumn').classList.remove('theme-dark');
           }
         }
         
@@ -50,6 +55,7 @@ document.addEventListener("DOMContentLoaded", function () {
         var newChat = leftColumn.querySelector('.NewChatButton');
         var transitionSlide1 = leftColumn.querySelector('#slide-1');
         var transitionSlide2 = leftColumn.querySelector('#slide-2');
+        var createChat = leftColumn.querySelector('#create-chat');
         
         searchInput.querySelector('#telegram-search-input').onfocus = function(){
           searchInput.classList.add('has-focus');
@@ -95,16 +101,62 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
 
+        // 
+        if(createChat){
+          var btnCreate = createChat.firstElementChild;
+          btnCreate.onclick = function(){
+            if(btnCreate.firstElementChild.getAttribute('class') == 'fas fa-pen'){
+              btnCreate.firstElementChild.setAttribute('class','fas fa-times')
+            }else {
+              btnCreate.firstElementChild.setAttribute('class','fas fa-pen')
+            }
+            createChat.querySelector('.sub-dropdown-chat').classList.toggle('open')
+          }
+        }
+
 
 
         leftColumn.onmouseover = function(){
-          newChat.classList.add('revealed')
+          newChat.classList.add('revealed');
+
         }
-        leftColumn.onmouseout = function(){
-          newChat.classList.remove('revealed')
+        leftColumn.onmouseleave = function(){
+          newChat.classList.remove('revealed');
+          if(createChat.firstElementChild.firstElementChild.getAttribute('class') == 'fas fa-times'){
+            btnCreate.firstElementChild.setAttribute('class','fas fa-pen')
+          }
+          if(createChat.lastElementChild.classList.contains('open')){
+            createChat.lastElementChild.classList.remove('open')
+          }
         }
       }
 
+      // middle column
+      if(middleColumn){
+        middleColumn.querySelector('.AttachMenu').onmouseover = function(){
+          middleColumn.querySelector('#attach-menu-controls').firstElementChild.classList.add('open')
+          middleColumn.querySelector('#attach-menu-controls').firstElementChild.classList.add('shown')
+        }
+        middleColumn.querySelector('.AttachMenu').onmouseleave = function(){
+          middleColumn.querySelector('#attach-menu-controls').firstElementChild.classList.remove('open')
+          middleColumn.querySelector('#attach-menu-controls').firstElementChild.classList.remove('shown')
+        }
+        // nhap text
+        var inputText = middleColumn.querySelector('#editable-message-text');
+        var placeholderText = middleColumn.querySelector('.placeholder-text');
+        inputText.addEventListener('input', function(){
+          if(inputText.innerHTML == ''){
+            placeholderText.style.display = 'block';
+            middleColumn.querySelector('.icon-send').style.display = 'none';
+            middleColumn.querySelector('.icon-microphone').style.display = 'block'
+            
+          }else {
+            placeholderText.style.display = 'none';
+            middleColumn.querySelector('.icon-microphone').style.display = 'none'
+            middleColumn.querySelector('.icon-send').style.display = 'block';
+          }
+        })
+      }
 
 
       
