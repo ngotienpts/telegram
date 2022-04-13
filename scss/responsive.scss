@@ -8,6 +8,9 @@
       --color-error: var(--color-white);
       --color-pinned: var(--color-white);
   }
+  .RightHeader .SearchInput {
+      margin-right: 1rem;
+  }
 }
 // tablet ~ 926px
 @media (min-width: 57.875em) {
@@ -35,11 +38,16 @@
       transform: translate3d(0, 0, 0);
       transition: transform var(--layer-transition);
   }
-  .MessageList .messages-container {
-    width: calc(100% - var(--right-column-width));
-  }
+  .MessageList .messages-container,
   #MiddleColumn .middle-column-footer {
     width: calc(100% - var(--right-column-width));
+  }
+  #Main.right-column-open .MessageList,
+  #Main.right-column-open .middle-column-footer {
+    transform: translate3d(calc(var(--right-column-width) / -2), 0, 0);
+  }
+  #Main.right-column-open .header-tools {
+    transform: translate3d(calc(var(--right-column-width) * -1), 0, 0);
   }
 }
 

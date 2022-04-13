@@ -437,8 +437,28 @@
                 </div>
                 <!-- end call -->
                 <!-- extend -->
-                <div class="hearder-tool-item header-tool_ extend Button smaller translucent round">
-                  <i class="fas fa-ellipsis-v"></i>
+                <div class="hearder-tool-item header-tool__extend Button smaller translucent round">
+                  <i class="fas fa-ellipsis-v hearder-tool__icon"></i>
+                  <div class="hearder-tool__dropdown">
+                    <div role="button" tabindex="0" class="MenuItem compact">
+                      <i class="fas fa-user-plus"></i>Add to contacts
+                    </div>
+                    <div role="button" tabindex="0" class="MenuItem compact">
+                      <i class="fas fa-video"></i>Video call
+                    </div>
+                    <div role="button" tabindex="0" class="MenuItem compact">
+                      <i class="fas fa-bell-slash"></i>Mute
+                    </div>
+                    <div role="button" tabindex="0" class="MenuItem compact">
+                      <i class="fas fa-check-circle"></i>Select messages
+                    </div>
+                    <div role="button" tabindex="0" class="MenuItem compact">
+                      <i class="fas fa-flag"></i>Report
+                    </div>
+                    <div role="button" tabindex="0" class="MenuItem destructive compact">
+                      <i class="fas fa-trash-alt"></i>Delete chat
+                    </div>
+                  </div>
                 </div>
                 <!-- end extend -->
               </div>
@@ -563,6 +583,186 @@
           </div>
         </section>
         <!-- end middle -->
+
+
+        <!-- search right column -->
+        <section id="RightColumn-wrapper" class="">
+          <div id="RightColumn">
+            <!-- right column search -->
+            <div class="RightColumn__Search">
+              <!-- header -->
+              <div class="RightHeader">
+                <button type="button" class="Button close-button close-right-column smaller translucent round" aria-label="Close" title="Close">
+                  <i class="fas fa-times animated-close-icon"></i>
+                </button>
+                <div class="Transition slide-fade">
+                  <div class="Transition__slide--active">
+                    <div class="SearchInput">
+                      <input type="text" dir="auto" placeholder="Search" class="form-control">
+                      <i class="fas fa-search"></i>
+                    </div>
+                    <button type="button" class="Button smaller translucent round" aria-label="Search messages by date" title="Search messages by date"><i class="fas fa-calendar-alt"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <!-- end header -->
+              <!-- container -->
+              <div class="Transition zoom-fade">
+                <div class="Transition__slide--active">
+                  <div class="RightSearch custom-scroll">
+                    <p class="helper-text" dir="auto">Search for messages</p>
+                  </div>
+                </div>
+              </div>
+              <!-- end container -->
+            </div>
+            <!-- end right column search -->
+            <!-- profile -->
+            <div class="RightColumn__Profile">
+              <!-- header -->
+              <div class="RightHeader">
+                <button type="button" class="Button close-button close-right-column smaller translucent round" aria-label="Close" title="Close">
+                  <i class="fas fa-times animated-close-icon"></i>
+                </button>
+                <div class="Transition slide-fade" style="overflow: visible;">
+                  <div class="Transition__slide--active">
+                    <h3>Profile</h3>
+                  </div>
+                </div>
+                <button type="button" class="Button smaller translucent round" aria-label="Search messages by date" title="Search messages by date"><i class="fas fa-pen"></i></i>
+                </button>
+              </div>
+              <!-- end header -->
+              <!-- container -->
+              <div class="Transition zoom-fade">
+                <div class="Transition__slide--active">
+                  <div class="RightProfile custom-scroll">
+                    <!-- avatar -->
+                    <div class="RightColumn__avatar">
+                      <div class="">
+                        <div class="thumb-img">
+                            <div class="thumb-item thumb-6x3">
+                              <img class="" src="./images/2.jpg">
+                              <div class="RightColumn__info">
+                                <h3 class="RightColumn__title">Nguyen van A</h3>
+                                <span class="RightColumn__status">last seen recenly</span>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                    <!-- end avatar -->
+                    <!-- chat extra -->
+                    <div class="RightColumn__ChatExtra">
+                      <div class="ListItem no-selection has-ripple narrow multiline">
+                        <div class="ListItem-button" role="button" tabindex="0">
+                          <i class="fas fa-phone-alt"></i>
+                          <div class="multiline-item">
+                            <span class="title" dir="auto">012345678</span>
+                            <span class="subtitle">Phone</span></div><div class="ripple-container">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="ListItem no-selection has-ripple narrow multiline">
+                        <div class="ListItem-button" role="button" tabindex="0">
+                          <i class="fas fa-at"></i>
+                          <div class="multiline-item">
+                            <span class="title" dir="auto">abc</span>
+                            <span class="subtitle">Username</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="ListItem narrow multiline is-static">
+                        <div class="ListItem-button" role="button" tabindex="0">
+                          <i class="fas fa-exclamation-circle"></i>
+                          <div class="multiline-item">
+                            <span class="title" dir="auto">Conan</span>
+                            <span class="subtitle">Bio</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="ListItem no-selection has-ripple">
+                        <div class="ListItem-button" role="button" tabindex="0">
+                          <i class="fas fa-bell"></i>
+                          <span>Notifications</span>
+                          <label class="Switcher inactive" title="Toggle User Notifications">
+                            <input type="checkbox" id="group-notifications" checked>
+                            <span class="widget"></span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- end chat extra -->
+                    <!--  -->
+                    <div class="RightColumn__Slide">
+                      <!-- tablist -->
+                      <div class="RightColumn__TabList no-selection no-scrollbar">
+                        <div class="Tab">
+                          <span>Media</span>
+                        </div>
+                        <div class="Tab">
+                          <span>Files</span>
+                        </div>
+                        <div class="Tab">
+                          <span>Links</span>
+                        </div>
+                        <div class="Tab">
+                          <span>Music</span>
+                        </div>
+                        <div class="Tab">
+                          <span>Voice</span>
+                        </div>
+                        <div class="Tab">
+                          <span>Groups</span>
+                        </div>
+                      </div>
+                      <!-- end tablist -->
+                      <div class="RecentContacts custom-scroll">
+                        <div class="RightColumn__Tab-content">
+                          <!-- pane -->
+                          <div class="Tab-pane">
+                            <div class="content empty-list"><div class="NothingFound opacity-transition fast open shown">No media files yet</div></div>
+                          </div>
+                          <!-- end pane -->
+                          <!-- pane -->
+                          <div class="Tab-pane">
+                            <div class="content empty-list"><div class="NothingFound opacity-transition fast open shown">No media files yet</div></div>
+                          </div>
+                          <!-- end pane -->
+                          <!-- pane -->
+                          <div class="Tab-pane">
+                            <div class="content empty-list"><div class="NothingFound opacity-transition fast open shown">No media files yetggggggg</div></div>
+                          </div>
+                          <!-- end pane -->
+                          <!-- pane -->
+                          <div class="Tab-pane">
+                            <div class="content empty-list"><div class="NothingFound opacity-transition fast open shown">No media files yet</div></div>
+                          </div>
+                          <!-- end pane -->
+                          <!-- pane -->
+                          <div class="Tab-pane">
+                            <div class="content empty-list"><div class="NothingFound opacity-transition fast open shown">No media files yetyyyyyyyyyyyy</div></div>
+                          </div>
+                          <!-- end pane -->
+                          <!-- pane -->
+                          <div class="Tab-pane">
+                            <div class="content empty-list"><div class="NothingFound opacity-transition fast open shown">No media files yet</div></div>
+                          </div>
+                          <!-- end pane -->
+                        </div>
+                      </div>
+                    </div>
+                    <!--  -->
+                  </div>
+                </div>
+              </div>
+              <!-- end container -->  
+            </div>
+            <!-- end profile -->
+          </div>
+        </section>
+        <!-- end search right column -->
       </div>
       
     </main>

@@ -7,10 +7,15 @@ document.addEventListener("DOMContentLoaded", function () {
     '.Switcher input[type="checkbox"]'
   );
 
-  //  LeftColumn
+
+  //  
+  var main = document.querySelector('#Main');
+
   var leftColumn = document.querySelector('#LeftColumn');
 
   var middleColumn =document.querySelector('#MiddleColumn');
+
+  var rightColumn =document.querySelector('#RightColumn-wrapper');
 
 
   const app = {
@@ -156,15 +161,71 @@ document.addEventListener("DOMContentLoaded", function () {
             middleColumn.querySelector('.icon-send').style.display = 'block';
           }
         })
+
+
+        // show extend submenu
+        middleColumn.querySelector('.hearder-tool__icon').onclick = function(){
+          middleColumn.querySelector('.hearder-tool__dropdown').classList.toggle('open')
+        }
       }
 
+      // right column
+      if(rightColumn){
 
+        // focus
+        rightColumn.querySelector('.SearchInput .form-control').onfocus = function(){
+          rightColumn.querySelector('.SearchInput').classList.add('has-focus')
+        }
+
+        // blur
+        rightColumn.querySelector('.SearchInput .form-control').onblur = function(){
+          rightColumn.querySelector('.SearchInput').classList.remove('has-focus')
+        }
+
+        if(middleColumn){
+          // show search right column 
+          var searchHeaderMiddle = middleColumn.querySelector('.header-tool__search');
+          var rightColumnSearch = rightColumn.querySelector('.RightColumn__Search');
+
+          var headerInfo = middleColumn.querySelector('.header-chat-info');
+          var rightColumnProfile = rightColumn.querySelector('.RightColumn__Profile');
+
+
+          // show search right column
+          searchHeaderMiddle.onclick = function(){
+            main.classList.toggle('right-column-open');
+            rightColumnSearch.classList.add('shown');
+            if(rightColumnProfile.classList.contains('shown')){
+              rightColumnProfile.classList.remove('shown');
+            }
+          }
+
+          // show profile right column
+          headerInfo.onclick = function(){
+            _this.slideTabListProfile();
+            main.classList.add('right-column-open');
+            rightColumnProfile.classList.add('shown');
+            if(rightColumnSearch.classList.contains('shown')){
+              rightColumnSearch.classList.remove('shown')
+
+            }
+          }
+        }
+
+        var closeRightColumn = rightColumn.querySelectorAll('.close-right-column');
+        closeRightColumn.forEach(function(a){
+          a.onclick = function(){
+            main.classList.remove('right-column-open')
+          }
+        })
+      }
       
 
 
 
       // hide cac element khi click ra ngoai
       document.addEventListener("click", function (e) {
+
         if (dropdownMenu) {
           if (
             !dropdownMenu.querySelector('.bubble.menu-container').contains(e.target) &&
@@ -172,6 +233,16 @@ document.addEventListener("DOMContentLoaded", function () {
           ) {
             dropdownMenu.querySelector('.bubble.menu-container').classList.remove('open')
             dropdownMenu.querySelector('.bubble.menu-container').classList.remove('shown')
+          }
+        }
+
+
+        if(middleColumn){
+          if(
+            !middleColumn.querySelector('.hearder-tool__dropdown').contains(e.target) &&
+            !e.target.matches('.hearder-tool__icon')
+          ) {
+            middleColumn.querySelector('.hearder-tool__dropdown').classList.remove('open')
           }
         }
       });
@@ -192,6 +263,28 @@ document.addEventListener("DOMContentLoaded", function () {
         slidesToShow: 1,
         slidesToScroll: 1,
         asNavFor: '.TabList',
+        infinite: false,
+        dots: false,
+        fade: true,
+        arrows: false,
+      });
+    },
+    // slide tab list profile
+    slideTabListProfile:function(){
+      $(".RightColumn__TabList")
+        .not(".slick-initialized")
+        .slick({
+          slidesToShow: 6,
+          slidesToScroll: 1,
+          arrows: false,
+          asNavFor: '.RightColumn__Tab-content',
+          focusOnSelect: true,
+          infinite: false,
+        });
+      $(".RightColumn__Tab-content").not(".slick-initialized").slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        asNavFor: '.RightColumn__TabList',
         infinite: false,
         dots: false,
         fade: true,
