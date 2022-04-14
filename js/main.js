@@ -61,6 +61,8 @@ document.addEventListener("DOMContentLoaded", function () {
         var transitionSlide1 = leftColumn.querySelector('#slide-1');
         var transitionSlide2 = leftColumn.querySelector('#slide-2');
         var createChat = leftColumn.querySelector('#create-chat');
+        var chatItems = leftColumn.querySelectorAll('.chat-item');
+        
         
         searchInput.querySelector('#telegram-search-input').onfocus = function(){
           searchInput.classList.add('has-focus');
@@ -134,6 +136,27 @@ document.addEventListener("DOMContentLoaded", function () {
             createChat.lastElementChild.classList.remove('open')
           }
         }
+
+
+        if(middleColumn){
+          var conversation = middleColumn.querySelector('#messages-layout');
+          var backBtn = middleColumn.querySelectorAll('.back-btn');
+          chatItems.forEach(function(a){
+            a.onclick = function(){
+              if(document.querySelector('.chat-item.selected') != null){
+                document.querySelector('.chat-item.selected').classList.remove('selected')
+              }
+              this.classList.add('selected');
+              conversation.classList.add('shown');
+              main.classList.add('middle-column-open')
+            }
+          })
+        }
+        backBtn.forEach(function(a){
+          a.onclick = function(){
+            main.classList.remove('middle-column-open')
+          }
+        })
       }
 
       // middle column
@@ -189,12 +212,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
           var headerInfo = middleColumn.querySelector('.header-chat-info');
           var rightColumnProfile = rightColumn.querySelector('.RightColumn__Profile');
+          var rightColumnEdit = rightColumn.querySelector('.RightColumn__Edit');
+          var showEditProfile = rightColumn.querySelector('.open-edit-profile');
 
 
           // show search right column
           searchHeaderMiddle.onclick = function(){
             main.classList.toggle('right-column-open');
             rightColumnSearch.classList.add('shown');
+            rightColumnEdit.classList.remove('shown');
             if(rightColumnProfile.classList.contains('shown')){
               rightColumnProfile.classList.remove('shown');
             }
@@ -210,6 +236,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
             }
           }
+          showEditProfile.onclick = function(){
+            rightColumnEdit.classList.add('shown');
+            if(rightColumnProfile.matches('.shown') || rightColumnSearch.matches('.shown') ){
+              rightColumnProfile.classList.remove('shown');
+              rightColumnSearch.classList.remove('shown');
+            }
+          }
+
         }
 
         var closeRightColumn = rightColumn.querySelectorAll('.close-right-column');

@@ -102,7 +102,7 @@
                   <div id="slide-1" class="Transition___slide active">
                     <div class="chat-list custom-scroll">
                       <!-- item -->
-                      <div class="chat-item selected">
+                      <div class="chat-item">
                         <!-- status -->
                         <div class="chat-status">
                           <img src="./images/3.jpg" alt="" class="chat-img">
@@ -404,7 +404,10 @@
           <div id="messages-layout">
             <!-- header -->
             <div class="MiddleHeader">
-              <div class="Transition slide-fade">
+              <div class="Transition slide-fade Transition-flex-mb">
+                <div class="back-btn">
+                  <i class="fas fa-arrow-left"></i>
+                </div>
                 <div class="header-chat-info">
                   <!-- img -->
                   <div class="chat-status">
@@ -630,7 +633,7 @@
                     <h3>Profile</h3>
                   </div>
                 </div>
-                <button type="button" class="Button smaller translucent round" aria-label="Search messages by date" title="Search messages by date"><i class="fas fa-pen"></i></i>
+                <button type="button" class="Button smaller translucent round open-edit-profile" aria-label="Search messages by date" title="Search messages by date"><i class="fas fa-pen"></i></i>
                 </button>
               </div>
               <!-- end header -->
@@ -760,6 +763,73 @@
               <!-- end container -->  
             </div>
             <!-- end profile -->
+            <!-- edit profile -->
+            <div class="RightColumn__Edit">
+              <!-- header -->
+              <div class="RightHeader">
+                <button type="button" class="Button close-button close-right-column smaller translucent round" aria-label="Close" title="Close">
+                  <i class="fas fa-arrow-left"></i>
+                </button>
+                <div class="Transition slide-fade" style="overflow: visible;">
+                  <div class="Transition__slide--active">
+                    <h3>Edit</h3>
+                  </div>
+                </div>
+              </div>
+              <!-- end header -->
+              <!-- container -->
+              <div class="Transition zoom-fade">
+                <div class="Transition__slide--active">
+                  <div class="Management">
+                    <div class="custom-scroll">
+                      <div class="section">
+                        <div class="ChatInfo">
+                          <div class="Avatar size-jumbo color-bg-6">
+                            <img src="./images/1.jpg" class="Avatar__img avatar-media opacity-transition slow open shown" alt="">
+                          </div>
+                          <div class="info">
+                            <div class="title">
+                              <h3 dir="auto">Quân</h3>
+                            </div>
+                            <span class="status" dir="auto">original name</span>
+                          </div>
+                        </div>
+                        <div class="input-group touched with-label">
+                          <input class="form-control" type="text" id="user-first-name" dir="auto" aria-label="First Name">
+                          <label for="user-first-name">First Name</label>
+                        </div>
+                        <div class="input-group touched with-label">
+                          <input class="form-control" type="text" id="user-last-name" dir="auto" aria-label="Last Name">
+                          <label for="user-last-name">Last Name</label>
+                        </div>
+                        <div class="ListItem no-selection narrow">
+                          <label class="Checkbox">
+                            <input type="checkbox" checked>
+                            <div class="Checkbox-main">
+                              <span class="label" dir="auto">Notifications</span>
+                              <span class="subLabel" dir="auto">Enabled</span>
+                            </div>
+                          </label>
+                        </div>
+                      </div>
+                      <div class="section">
+                        <div class="ListItem no-selection has-ripple destructive">
+                          <div class="ListItem-button" role="button" tabindex="0">
+                            <i class="fas fa-trash-alt"></i>Delete contact
+                            <div class="ripple-container"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <button type="button" class="Button FloatingActionButton default primary round" aria-label="Save" title="Save" tabindex="-1">
+                      <i class="icon-check"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <!-- end container -->
+            </div>
+            <!-- end edit profile -->
           </div>
         </section>
         <!-- end search right column -->
