@@ -60,6 +60,7 @@ document.addEventListener("DOMContentLoaded", function () {
         var newChat = leftColumn.querySelector('.NewChatButton');
         var transitionSlide1 = leftColumn.querySelector('#slide-1');
         var transitionSlide2 = leftColumn.querySelector('#slide-2');
+        var transitionSlide3 = leftColumn.querySelector('#slide-3');
         var createChat = leftColumn.querySelector('#create-chat');
         var chatItems = leftColumn.querySelectorAll('.chat-item');
         
@@ -91,7 +92,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
         if(dropdownMenu){
-          dropdownMenu.querySelector('.Button.has-ripple').onclick = function(){
+          var submenuContact = document.querySelector('.submenu-contact');
+          var dropdownMenuContainer = dropdownMenu.querySelector('.bubble.menu-container');
+          var addChat = document.querySelector('#add-chat');
+          document.querySelector('.show-submenu').onclick = function(){
             if(stateBack.classList.contains('state-back')){
               stateBack.classList.remove('state-back');
               if(transitionSlide1 && transitionSlide2){
@@ -101,9 +105,31 @@ document.addEventListener("DOMContentLoaded", function () {
     
               }
             }else {
-              dropdownMenu.querySelector('.bubble.menu-container').classList.toggle('open')
-              dropdownMenu.querySelector('.bubble.menu-container').classList.toggle('shown')
+              dropdownMenuContainer.classList.toggle('open')
+              dropdownMenuContainer.classList.toggle('shown')
             }
+
+
+            // show contact
+            if(submenuContact){
+              submenuContact.onclick = function(){
+                if(( transitionSlide1).matches('.active')){
+                  transitionSlide1.classList.remove('active');
+                  transitionSlide2.classList.remove('active');
+                  transitionSlide3.classList.add('active');
+                  dropdownMenuContainer.classList.toggle('open')
+                  dropdownMenuContainer.classList.toggle('shown');
+                  stateBack.classList.add('state-back')
+                }
+              }
+            }
+
+          }
+          if(transitionSlide1.matches('.active')){
+            addChat.style.display = 'none';
+          }
+          if(transitionSlide3.matches('.active')){
+            console.log(12)
           }
         }
 
@@ -129,11 +155,13 @@ document.addEventListener("DOMContentLoaded", function () {
         }
         leftColumn.onmouseleave = function(){
           newChat.classList.remove('revealed');
-          if(createChat.firstElementChild.firstElementChild.getAttribute('class') == 'fas fa-times'){
-            btnCreate.firstElementChild.setAttribute('class','fas fa-pen')
-          }
-          if(createChat.lastElementChild.classList.contains('open')){
-            createChat.lastElementChild.classList.remove('open')
+          if(createChat){
+            if(createChat.firstElementChild.firstElementChild.getAttribute('class') == 'fas fa-times'){
+              btnCreate.firstElementChild.setAttribute('class','fas fa-pen')
+            }
+            if(createChat.lastElementChild.classList.contains('open')){
+              createChat.lastElementChild.classList.remove('open')
+            }
           }
         }
 
