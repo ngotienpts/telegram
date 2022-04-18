@@ -23,10 +23,10 @@
   <body>
     <!-- main -->
     <main id="UiLoader" >
-      <div id="Main">
+      <div id="Main" class="left-column-open">
         <!-- left -->
         <section id="LeftColumn">
-          <div class="Transition push-slide">
+          <div class="Transition push-slide" style="display: none;">
             <div class="Transition__slide--active">
               <div id="LeftColumn-main">
                 <!-- header -->
@@ -39,7 +39,7 @@
                         <div class="ripple-container"></div>
                       </button>
                       <div class="Menu no-selection compact">
-                        <div class="bubble menu-container custom-scroll top left with-footer opacity-transition fast" style="transform-origin: left top;">
+                        <div class="sub-menu bubble menu-container custom-scroll top left with-footer opacity-transition fast" style="transform-origin: left top;">
                           <div role="button" tabindex="0" class="MenuItem compact">
                             <i class="fas fa-bookmark"></i>
                             Saved Messages
@@ -52,7 +52,7 @@
                             <i class="fas fa-user"></i>
                             Contacts
                           </div>
-                          <div role="button" tabindex="0" class="MenuItem compact">
+                          <div role="button" tabindex="0" class="MenuItem compact submenu-setting">
                             <i class="fas fa-cog"></i>
                             Settings
                           </div>
@@ -467,6 +467,62 @@
               </div>
             </div>
           </div>
+          <!-- setting -->
+          <div class="Transition setting-wrapper">
+            <div class="LeftColumn__Setting shown">
+              <!-- header -->
+              <div class="LeftHeader">
+                <button type="button" class="Button close-button close-right-column smaller translucent round" aria-label="Close" title="Close">
+                  <i class="fas fa-arrow-left animated-close-icon-left"></i>
+                </button>
+                <div class="Transition slide-fade" style="overflow: visible;">
+                  <div class="Transition__slide--active">
+                    <h3>Profile</h3>
+                  </div>
+                </div>
+                <button type="button" class="Button smaller translucent round open-edit-profile" aria-label="Search messages by date" title="Search messages by date"><i class="fas fa-pen"></i>
+                </button>
+              </div>
+              <!-- end header -->
+              <!-- container -->
+              <div class="Transition zoom-fade">
+                <div class="Transition__slide--active">
+                  <div class="LeftSetting custom-scroll">
+                    <!-- avatar -->
+                    <div class="LeftColumn__avatar">
+                      <div class="">
+                        <div class="thumb-img">
+                            <div class="thumb-item thumb-6x3">
+                              <img class="" src="./images/2.jpg">
+                              <div class="LeftColumn__info">
+                                <h3 class="LeftColumn__title">Nguyen van A</h3>
+                                <span class="LeftColumn__status">last seen recenly</span>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                    <!-- end avatar -->
+                    <!-- chat extra -->
+                    <div class="LeftColumn__ChatExtra">
+                      <div class="ListItem no-selection has-ripple narrow multiline">
+                        <div class="ListItem-button" role="button" tabindex="0">
+                          <i class="fas fa-phone-alt"></i>
+                          <div class="multiline-item">
+                            <span class="title" dir="auto">012345678</span>
+                            <span class="subtitle">Phone</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- end chat extra -->
+                  </div>
+                </div>
+              </div>
+              <!-- end container -->
+            </div>
+          </div>
+          <!-- end setting -->
         </section>
         <!-- end left -->
         <!-- middle -->
@@ -734,7 +790,7 @@
                           <i class="fas fa-phone-alt"></i>
                           <div class="multiline-item">
                             <span class="title" dir="auto">012345678</span>
-                            <span class="subtitle">Phone</span></div><div class="ripple-container">
+                            <span class="subtitle">Phone</span>
                           </div>
                         </div>
                       </div>
@@ -831,7 +887,7 @@
                   </div>
                 </div>
               </div>
-              <!-- end container -->  
+              <!-- end container -->
             </div>
             <!-- end profile -->
             <!-- edit profile -->
@@ -887,7 +943,6 @@
                         <div class="ListItem no-selection has-ripple destructive">
                           <div class="ListItem-button" role="button" tabindex="0">
                             <i class="fas fa-trash-alt"></i>Delete contact
-                            <div class="ripple-container"></div>
                           </div>
                         </div>
                       </div>
@@ -905,7 +960,7 @@
         </section>
         <!-- end search right column -->
       </div>
-      
+
     </main>
     <!-- end main -->
     <script src="./slick/slick-1.8.1/slick/slick.min.js"></script>
