@@ -1,0 +1,121 @@
+.portals {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+.Modal {
+    position: relative;
+    z-index: var(--z-modal);
+}
+.Modal .modal-container {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Modal .modal-backdrop {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    background-color: rgba(0,0,0,.25);
+}
+.Modal .modal-dialog {
+    position: relative;
+    display: inline-flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 35rem;
+    min-width: 17.5rem;
+    margin: 2rem auto;
+    background-color: var(--color-background);
+    box-shadow: 0 0.25rem 0.5rem 0.125rem var(--color-default-shadow);
+    border-radius: var(--border-radius-default);
+    transform: translate3d(0, -1rem, 0);
+    transition: transform .2s ease,opacity .2s ease;
+}
+.NewContactModal .modal-dialog {
+    max-width: 28rem;
+}
+.Modal.open .modal-dialog {
+    transform: translate3d(0, 0, 0);
+}
+.Modal .modal-header, .Modal .modal-header-condensed {
+    padding: 1rem 1rem 0;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+.Modal .modal-title {
+    font-size: 1.25rem;
+    font-weight: 500;
+    flex: 1 1 auto;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.Modal .modal-title, .Modal .modal-content, .Modal .modal-content>p {
+    unicode-bidi: plaintext;
+    text-align: initial;
+}
+.Modal .modal-content {
+    width: 100%;
+    flex-grow: 1;
+    padding: 1rem;
+    overflow-y: auto;
+    max-height: 90vh;
+}
+.NewContactModal__profile {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+div.color-bg-1 {
+    --color-user: var(--color-user-1);
+}
+.NewContactModal__profile-info {
+    margin-inline-start: 1rem;
+}
+.NewContactModal__phone-number {
+    font-size: 1.5rem;
+    margin-bottom: 0;
+}
+.NewContactModal__user-status {
+    color: var(--color-text-secondary);
+}
+.NewContactModal__help-text {
+    font-size: .9375rem;
+    color: var(--color-text-secondary);
+}
+.Modal .dialog-buttons {
+    display: flex;
+    align-items: flex-end;
+}
+.Modal .confirm-dialog-button {
+    width: auto;
+    height: auto;
+    margin-left: auto;
+    text-align: right;
+    font-weight: 500;
+    white-space: pre-wrap;
+}
+.Modal .dialog-buttons .confirm-dialog-button+.confirm-dialog-button {
+    margin-left: 1rem;
+}
+.Button.text.primary {
+    color: var(--color-primary);
+    background-color: transparent;
+}
+.NewContactModal__new-contact {
+    display: flex;
+}
+.NewContactModal__new-contact-fieldset {
+    flex: 1;
+    margin-inline-start: 1rem;
+}

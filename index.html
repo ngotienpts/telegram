@@ -21,12 +21,101 @@
   </head>
 
   <body>
+    <!-- popup add contact -->
+    <div id="popup-add-contact" class="portals">
+      <div data-teact-head-id="id5663478535191744">
+        <div class="Modal NewContactModal opacity-transition fast" tabindex="-1" role="dialog">
+          <div class="modal-container">
+            <div class="modal-backdrop"></div>
+            <div class="modal-dialog">
+              <div class="modal-header">
+                <div class="modal-title">New Contact</div>
+              </div>
+              <div class="modal-content custom-scroll">
+                <div class="NewContactModal__profile">
+                  <div class="Avatar size-jumbo color-bg-1">
+                    <img src="./images/2.jpg" class="Avatar__img avatar-media opacity-transition slow open shown" alt="" decoding="async">
+                  </div>
+                  <div class="NewContactModal__profile-info">
+                    <p class="NewContactModal__phone-number">+42777</p>
+                    <span class="NewContactModal__user-status" dir="auto">service notifications</span>
+                  </div>
+                </div>
+                <div class="input-group with-label">
+                  <input class="form-control" type="text" dir="auto" tabindex="0" aria-label="First name (required)">
+                  <label>First name (required)</label>
+                </div>
+                <div class="input-group with-label">
+                  <input class="form-control" type="text" dir="auto" tabindex="0" aria-label="Last name (optional)">
+                  <label>Last name (optional)</label>
+                </div>
+                <p class="NewContactModal__help-text">Phone number will be <b>visible</b> once Telegram adds you as a contact.
+                </p>
+                <label class="Checkbox">
+                  <input type="checkbox" tabindex="0" checked>
+                  <div class="Checkbox-main">
+                    <span class="label" dir="auto">Share my phone number</span>
+                  </div>
+                </label>
+                <p class="NewContactModal__help-text">You can make your phone visible to Telegram.</p>
+                <div class="dialog-buttons">
+                  <button type="button" class="Button confirm-dialog-button default primary text Cancel">Cancel</button>
+                  <button type="button" class="Button confirm-dialog-button default primary text">Done</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end popup add contact -->
+
+
+    <!-- popup new contact -->
+    <div id="popup-new-contact" class="portals">
+      <div data-teact-head-id="id990099883531687">
+        <div class="Modal NewContactModal opacity-transition fast" tabindex="-1" role="dialog">
+          <div class="modal-container">
+            <div class="modal-backdrop"></div>
+            <div class="modal-dialog">
+              <div class="modal-header">
+                <div class="modal-title">New Contact</div>
+              </div>
+              <div class="modal-content custom-scroll">
+                <div class="NewContactModal__new-contact">
+                  <div class="Avatar size-jumbo color-bg-1 no-photo"></div>
+                  <div class="NewContactModal__new-contact-fieldset">
+                    <div class="input-group with-label">
+                      <input class="form-control" type="text" dir="auto" tabindex="0" inputmode="tel" aria-label="Phone Number">
+                      <label>Phone Number</label>
+                    </div>
+                    <div class="input-group with-label">
+                      <input class="form-control" type="text" dir="auto" tabindex="0" aria-label="First name (required)">
+                      <label>First name (required)</label>
+                    </div>
+                    <div class="input-group with-label">
+                      <input class="form-control" type="text" dir="auto" tabindex="0" aria-label="Last name (optional)">
+                      <label>Last name (optional)</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="dialog-buttons">
+                  <button type="button" class="Button confirm-dialog-button default primary text Cancel">Cancel</button>
+                  <button type="button" class="Button confirm-dialog-button default primary disabled text">Done</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end popup new contact -->
     <!-- main -->
     <main id="UiLoader" >
-      <div id="Main" class="left-column-open">
+      <div id="Main">
         <!-- left -->
         <section id="LeftColumn">
-          <div class="Transition push-slide" style="display: none;">
+          <div class="Transition push-slide active">
             <div class="Transition__slide--active">
               <div id="LeftColumn-main">
                 <!-- header -->
@@ -457,7 +546,7 @@
                   <!-- end create chat -->
                   <!-- add contact -->
                   <div id="add-chat">
-                    <button type="button" class="Button FloatingActionButton revealed default primary round" aria-label="Create New Contact" title="Create New Contact" tabindex="-1">
+                    <button type="button" class="Button FloatingActionButton revealed default primary round NewContact" aria-label="Create New Contact" title="Create New Contact" tabindex="-1">
                       <i class="fas fa-user-plus"></i>
                     </button>
                   </div>
@@ -469,19 +558,30 @@
           </div>
           <!-- setting -->
           <div class="Transition setting-wrapper">
-            <div class="LeftColumn__Setting shown">
+            <div class="LeftColumn__Setting">
               <!-- header -->
               <div class="LeftHeader">
-                <button type="button" class="Button close-button close-right-column smaller translucent round" aria-label="Close" title="Close">
+                <button type="button" class="Button close-button close-left-column smaller translucent round" aria-label="Close" title="Close">
                   <i class="fas fa-arrow-left animated-close-icon-left"></i>
                 </button>
                 <div class="Transition slide-fade" style="overflow: visible;">
                   <div class="Transition__slide--active">
-                    <h3>Profile</h3>
+                    <h3>Settings</h3>
                   </div>
                 </div>
-                <button type="button" class="Button smaller translucent round open-edit-profile" aria-label="Search messages by date" title="Search messages by date"><i class="fas fa-pen"></i>
+                <button type="button" class="Button smaller translucent round open-edit-setting" aria-label="Search messages by date" title="Search messages by date"><i class="fas fa-pen"></i>
                 </button>
+                <div class="LeftHeader__extend">
+                  <button type="button" class="Button smaller translucent round LeftHeader__open-extend" title="Extend"><i class="fas fa-ellipsis-v"></i>
+                  </button>
+                  <div class="Menu no-selection compact settings-more-menu">
+                    <div class="bubble menu-container custom-scroll top right opacity-transition fast">
+                      <div role="button" tabindex="0" class="MenuItem compact">
+                        <i class="fas fa-sign-out-alt"></i>Log Out
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
               <!-- end header -->
               <!-- container -->
@@ -503,17 +603,73 @@
                     </div>
                     </div>
                     <!-- end avatar -->
-                    <!-- chat extra -->
+                    <!--  -->
                     <div class="LeftColumn__ChatExtra">
+                      <!-- item -->
                       <div class="ListItem no-selection has-ripple narrow multiline">
                         <div class="ListItem-button" role="button" tabindex="0">
-                          <i class="fas fa-phone-alt"></i>
+                          <i class="fas fa-phone"></i>
                           <div class="multiline-item">
-                            <span class="title" dir="auto">012345678</span>
+                            <span class="title" dir="auto">+84 123 123 123</span>
                             <span class="subtitle">Phone</span>
                           </div>
                         </div>
                       </div>
+                      <!-- end item -->
+                    </div>
+                    <!--  -->
+                    <!-- chat extra -->
+                    <div class="LeftColumn__ChatExtra">
+                      <!-- item -->
+                      <div class="ListItem no-selection GeneralSetting">
+                        <div class="ListItem-button" role="button" tabindex="0">
+                          <i class="fas fa-cog"></i>General Settings
+                        </div>
+                      </div>
+                      <!-- end item -->
+                      <!-- item -->
+                      <div class="ListItem no-selection Notifications">
+                        <div class="ListItem-button" role="button" tabindex="0">
+                          <i class="fas fa-bell"></i>Notifications
+                        </div>
+                      </div>
+                      <!-- end item -->
+                      <!-- item -->
+                      <div class="ListItem no-selection Database">
+                        <div class="ListItem-button" role="button" tabindex="0">
+                          <i class="fas fa-database"></i>Data and Storage
+                        </div>
+                      </div>
+                      <!-- end item -->
+                      <!-- item -->
+                      <div class="ListItem no-selection Privacy">
+                        <div class="ListItem-button" role="button" tabindex="0">
+                          <i class="fas fa-lock"></i>Privacy and Security
+                        </div>
+                      </div>
+                      <!-- end item -->
+                      <!-- item -->
+                      <div class="ListItem no-selection Folder">
+                        <div class="ListItem-button" role="button" tabindex="0">
+                          <i class="fas fa-folder"></i>Folders
+                        </div>
+                      </div>
+                      <!-- end item -->
+                      <!-- item -->
+                      <div class="ListItem no-selection Session">
+                        <div class="ListItem-button" role="button" tabindex="0">
+                          <i class="fab fa-creative-commons-sampling"></i>Active Sessions
+                          <span class="settings-item__current-value">3</span>
+                        </div>
+                      </div>
+                      <!-- end item -->
+                      <!-- item -->
+                      <div class="ListItem no-selection Language">
+                        <div class="ListItem-button" role="button" tabindex="0">
+                          <i class="fas fa-language"></i>Language
+                        </div>
+                      </div>
+                      <!-- end item -->
                     </div>
                     <!-- end chat extra -->
                   </div>
@@ -523,6 +679,82 @@
             </div>
           </div>
           <!-- end setting -->
+          <!-- edit setting -->
+          <div class="Transition edit-setting-wrapper">
+            <div class="LeftColumn__Edit">
+              <!-- header -->
+              <div class="LeftHeader">
+                <button type="button" class="Button close-button close-left-column smaller translucent round" aria-label="Close" title="Close">
+                  <i class="fas fa-arrow-left animated-close-icon-left"></i>
+                </button>
+                <div class="Transition slide-fade" style="overflow: visible;">
+                  <div class="Transition__slide--active">
+                    <h3>Edit Profile</h3>
+                  </div>
+                </div>
+              </div>
+              <!-- end header -->
+              <!-- container -->
+              <div class="Transition zoom-fade">
+                <div class="Transition__slide--active">
+                  <div class="Management">
+                    <div class="custom-scroll">
+                      <div class="section">
+                        <!--  -->
+                        <div class="AvatarEditable">
+                          <label class="filled" role="button" tabindex="0" title="Edit your profile photo">
+                            <input type="file" accept="image/png, image/jpeg"><i class="fas fa-camera-retro"></i>
+                            <img src="./images/2.jpg" alt="Avatar">
+                          </label>
+                        </div>
+                        <!--  -->
+                        <div class="input-group touched with-label">
+                          <input class="form-control" type="text" id="user-first-name" dir="auto" aria-label="First Name">
+                          <label for="user-first-name">First Name</label>
+                        </div>
+                        <div class="input-group touched with-label">
+                          <input class="form-control" type="text" id="user-last-name" dir="auto" aria-label="Last Name">
+                          <label for="user-last-name">Last Name</label>
+                        </div>
+                        <div class="input-group with-label"><input class="form-control" type="text" dir="auto" aria-label="Bio"><label>Bio</label></div>
+                        <p class="settings-item-description">Any details such as age, occupation or city.<br>Example: 23 y.o. designer from San Francisco</p>
+                      </div>
+                      <div class="settings-item"><h4 class="settings-item-header">Username</h4><div class="input-group with-label"><input class="form-control" type="text" dir="auto" aria-label="Username"><label>Username</label></div><p class="settings-item-description">You can choose a username on <b>Telegram</b>. If you do, people will be able to find you by this username and contact you without needing your phone number.<br><br>You can use <b>a–z</b>, <b>0–9</b> and underscores. Minimum length is <b>5</b> characters.</p></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- end container -->
+            </div>
+          </div>
+          <!-- end edit setting -->
+          <!-- general setting -->
+          <div class="Transition general-setting-wrapper">
+            <div class="LeftColumn__Setting">
+              <!-- header -->
+              <div class="LeftHeader">
+                <button type="button" class="Button close-button close-left-column smaller translucent round" aria-label="Close" title="Close">
+                  <i class="fas fa-arrow-left animated-close-icon-left"></i>
+                </button>
+                <div class="Transition slide-fade" style="overflow: visible;">
+                  <div class="Transition__slide--active">
+                    <h3>General Setting</h3>
+                  </div>
+                </div>
+              </div>
+              <!-- end header -->
+              <!-- container -->
+              <div class="Transition zoom-fade">
+                <div class="Transition__slide--active">
+                  <div class="Management">
+                    <div class="settings-content custom-scroll"><div class="settings-item pt-3"><h4 class="settings-item-header">Settings</h4><div class="RangeSlider"><div class="slider-top-row"><span class="label" dir="auto">Message Text Size</span><span class="value" dir="auto">16</span></div><div class="slider-main"><div class="slider-fill-track" style="width: 50%;"></div><input min="12" max="20" step="1" type="range" class="RangeSlider__input"></div></div><div class="ListItem no-selection"><div class="ListItem-button" role="button" tabindex="0"><i class="fas fa-image"></i>Chat Background</div></div></div><div class="settings-item"><h4 class="settings-item-header">Theme</h4><div class="radio-group"><label class="Radio"><input type="radio" name="theme" value="light"><div class="Radio-main"><span class="label">Light</span></div></label><label class="Radio"><input type="radio" name="theme" value="dark"><div class="Radio-main"><span class="label">Dark</span></div></label><label class="Radio"><input type="radio" name="theme" value="auto"><div class="Radio-main"><span class="label">System</span></div></label></div></div><div class="settings-item"><h4 class="settings-item-header">Time Format</h4><div class="radio-group"><label class="Radio"><input type="radio" name="timeformat" value="12h"><div class="Radio-main"><span class="label">12-hour</span></div></label><label class="Radio"><input type="radio" name="timeformat" value="24h"><div class="Radio-main"><span class="label">24-hour</span></div></label></div></div><div class="settings-item"><h4 class="settings-item-header">Animation Level</h4><p class="settings-item-description">Choose the desired animations amount.</p><div class="RangeSlider"><div class="slider-main"><div class="slider-fill-track" style="width: 100%;"></div><input min="0" max="2" step="1" type="range" class="RangeSlider__input"><div class="slider-options"><div class="slider-option no-selection">Solid and Steady</div><div class="slider-option no-selection">Nice and Fast</div><div class="slider-option no-selection active">Lots of Stuff</div></div></div></div></div><div class="settings-item"><h4 class="settings-item-header">Keyboard</h4><div class="radio-group"><label class="Radio"><input type="radio" name="keyboard-send-settings" value="enter"><div class="Radio-main"><span class="label">Send with Enter</span><span class="subLabel">New line by Shift + Enter</span></div></label><label class="Radio"><input type="radio" name="keyboard-send-settings" value="ctrl-enter"><div class="Radio-main"><span class="label">Send with Ctrl+Enter</span><span class="subLabel">New line by Enter</span></div></label></div></div><div class="settings-item"><h4 class="settings-item-header">Stickers</h4><div class="ListItem SettingsDefaultReaction no-selection"><div class="ListItem-button" role="button" tabindex="0"><img class="ReactionStaticEmoji" alt="" src="./images/like.webp"><div class="title">Quick Reaction</div></div></div><label class="Checkbox"><input type="checkbox"><div class="Checkbox-main"><span class="label" dir="auto">Suggest stickers by emoji</span></div></label><label class="Checkbox"><input type="checkbox"><div class="Checkbox-main"><span class="label" dir="auto">Loop Animated Stickers</span></div></label><div class="mt-4"></div></div></div>
+                  </div>
+                </div>
+              </div>
+              <!-- end container -->
+            </div>
+          </div>
+          <!-- end general setting -->
         </section>
         <!-- end left -->
         <!-- middle -->
@@ -570,7 +802,7 @@
                 <div class="hearder-tool-item header-tool__extend Button smaller translucent round">
                   <i class="fas fa-ellipsis-v hearder-tool__icon"></i>
                   <div class="hearder-tool__dropdown">
-                    <div role="button" tabindex="0" class="MenuItem compact">
+                    <div role="button" tabindex="0" class="MenuItem compact AddContact">
                       <i class="fas fa-user-plus"></i>Add to contacts
                     </div>
                     <div role="button" tabindex="0" class="MenuItem compact">
@@ -607,7 +839,7 @@
                         <div class="message-content-wrapper can-select-text">
                           <div class="message-content text has-shadow has-solid-background has-appendix">
                             <div class="content-inner">
-                              <p class="text-content with-meta">giờ dùng cả tele hả Ông
+                              <p class="text-content with-meta">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, quaerat, illum animi, ex inventore sunt ut nemo rerum veniam magni consectetur odit soluta! Eum suscipit aperiam esse ducimus cum quos?
                                 <span class="MessageMeta">
                                   <span class="message-time" title="Mar 9, 2022, 5:12:20 PM">17:12</span>
                                 </span>
@@ -643,7 +875,7 @@
                         <div class="message-content-wrapper can-select-text">
                           <div class="message-content text has-shadow has-solid-background has-appendix" dir="auto" style="">
                             <div class="content-inner" dir="auto">
-                              <p class="text-content with-meta with-outgoing-icon" dir="auto">Món này có gì vui ko ông
+                              <p class="text-content with-meta with-outgoing-icon" dir="auto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem aut minus commodi in deleniti ex, dolores earum rerum perspiciatis sequi vero nisi iure voluptatem similique eaque. Eveniet distinctio facere placeat.
                                 <span class="MessageMeta" dir="ltr">
                                   <span class="message-time">17:13</span>
                                   <span class="MessageOutgoingStatus">
@@ -966,8 +1198,6 @@
     <script src="./slick/slick-1.8.1/slick/slick.min.js"></script>
     <script src="./slick/slick-1.8.1/slick/slick.js"></script>
     <script src="./font-awesome/fontawesome-free-5.15.4-web/js/fontawesome.min.js"></script>
-    <!-- <script src="./js/ResizeSensor.js"></script>
-    <script src="./js/theia-sticky-sidebar.js"></script> -->
     <script src="./js/main.js"></script>
   </body>
 </html>

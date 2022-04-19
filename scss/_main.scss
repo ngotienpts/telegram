@@ -1270,8 +1270,7 @@ svg:not(:root) {
 .RightHeader .SearchInput {
   margin-left: 1rem;
 }
-#RightColumn > .Transition,
-#LeftColumn > .Transition {
+#RightColumn > .Transition {
   height: calc(100% - var(--header-height));
   overflow: hidden;
 }
@@ -1296,17 +1295,28 @@ svg:not(:root) {
 }
 .RightColumn__Search,
 .RightColumn__Profile,
-.RightColumn__Edit,
-.LeftColumn__Setting {
+.RightColumn__Edit {
   display: none;
   height: calc(100% - var(--header-height));
   overflow: hidden;
+}
+.LeftColumn__Setting,
+.LeftColumn__Edit,
+.LeftColumn__Setting {
+  height: calc(100% - var(--header-height));
+  overflow: hidden;
+}
+.setting-wrapper,
+.edit-setting-wrapper,
+.general-setting-wrapper {
+  display: none;
 }
 #Main.right-column-open #RightColumn .shown,
 #Main.left-column-open #LeftColumn .shown {
   display: block;
 }
-.RightColumn__info {
+.RightColumn__info,
+.LeftColumn__info {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -1324,7 +1334,8 @@ svg:not(:root) {
   justify-content: flex-end;
   pointer-events: none;
 }
-.RightColumn__title {
+.RightColumn__title,
+.LeftColumn__title {
   font-weight: 500;
   font-size: 1.25rem;
   line-height: 1.375rem;
@@ -1332,13 +1343,15 @@ svg:not(:root) {
   word-break: break-word;
   margin-bottom: 0.25rem;
 }
-.RightColumn__status {
+.RightColumn__status,
+.LeftColumn__status {
   font-size: 0.875rem;
   opacity: 0.5;
 }
 #RightColumn .RightColumn__Profile .Transition,
 #RightColumn .RightColumn__Edit .Transition,
-#LeftColumn .LeftColumn__Setting .Transition {
+#LeftColumn .LeftColumn__Setting .Transition,
+#LeftColumn .LeftColumn__Edit .Transition {
   height: calc(100% - var(--header-height));
   overflow: hidden;
 }
@@ -1350,11 +1363,14 @@ svg:not(:root) {
   overflow-y: overlay;
   overflow-x: hidden;
 }
-.RightColumn__ChatExtra,
-.LeftColumn__ChatExtra {
+.RightColumn__ChatExtra {
   padding: 0.875rem 0.5rem 0.5rem;
   box-shadow: inset 0 -0.0625rem 0 0 var(--color-background-secondary-accent);
   border-bottom: 0.625rem solid var(--color-background-secondary);
+}
+
+.LeftColumn__ChatExtra {
+  padding: 0.875rem 0.5rem 0.5rem;
 }
 .RightColumn__ChatExtra .ListItem,
 .LeftColumn__ChatExtra .ListItem {
@@ -1720,6 +1736,262 @@ label {
   margin-bottom: 0;
   font-size: 1.25rem;
   font-weight: 500;
-  margin-left: 1.375rem;
+  margin-left: 1rem;
   margin-right: auto;
+}
+.settings-item__current-value {
+  margin-inline-start: auto;
+  padding-inline-start: 0.5rem;
+  font-size: .9375rem;
+  color: var(--color-text-secondary);
+}
+.push-slide:not(.active){
+  display: none;
+}
+.AvatarEditable label {
+  margin-left: auto;
+  margin-right: auto;
+  width: 7.5rem;
+  height: 7.5rem;
+  margin-bottom: 2rem;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-primary);
+  border-radius: 50%;
+  color: #fff;
+  font-size: 3rem;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  outline: none !important;
+}
+.AvatarEditable label.filled {
+  background-color: var(--color-background);
+}
+.AvatarEditable label input {
+  display: none;
+}
+.AvatarEditable label i {
+  transform: scale(1);
+  transition: transform .15s linear;
+  z-index: var(--z-register-add-avatar);
+}
+.AvatarEditable label:hover i {
+  transform: scale(1.2);
+}
+.AvatarEditable label img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.AvatarEditable label.filled::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,.4);
+}
+.settings-item-description {
+  font-size: .875rem;
+  color: var(--color-text-secondary);
+  margin-top: -0.5rem;
+  margin-bottom: 1.5rem;
+}
+.settings-edit-profile .settings-item-description {
+  margin-bottom: 0;
+  padding-bottom: 1.5rem;
+}
+.settings-item {
+  background-color: var(--color-background);
+  padding: 1.5rem 1.5rem 1rem;
+  box-shadow: inset 0 -0.0625rem 0 0 var(--color-background-secondary-accent);
+  margin-bottom: 0.625rem;
+}
+.settings-item-header {
+  font-size: 1rem;
+  color: var(--color-text-secondary);
+  margin-bottom: 2rem;
+  position: relative;
+}
+.settings-more-menu {
+  position: relative;
+}
+.settings-more-menu .open {
+  transform-origin: right top;
+  opacity: 1;
+  display: block;
+  transform: scale(1);
+  right: 0;
+}
+.settings-content {
+  border-top: 1px solid var(--color-borders);
+  background-color: var(--color-background-secondary);
+  height: calc(100% - var(--header-height));
+  overflow-y: auto;
+  overflow-y: overlay;
+  overflow-x: hidden;
+}
+.settings-item {
+  background-color: var(--color-background);
+  padding: 1.5rem 1.5rem 1rem;
+  box-shadow: inset 0 -0.0625rem 0 0 var(--color-background-secondary-accent);
+  margin-bottom: 0.625rem;
+}
+.RangeSlider {
+  --slider-color: var(--color-primary);
+  margin-bottom: 1rem;
+}
+.settings-item .RangeSlider {
+  margin-bottom: 1.0625rem;
+}
+.RangeSlider .slider-top-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.625rem;
+}
+.RangeSlider .slider-top-row .value {
+  flex-shrink: 0;
+  margin-left: 1rem;
+  color: var(--color-text-secondary);
+}
+.RangeSlider .slider-main {
+  position: relative;
+  z-index: 1;
+}
+.RangeSlider .slider-main::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0.3125rem;
+  height: 0.125rem;
+  background-color: var(--color-borders);
+  border-radius: 0.125rem;
+  opacity: .5;
+  z-index: -1;
+}
+.RangeSlider .slider-fill-track {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0.3125rem;
+  height: 0.125rem;
+  background-color: var(--slider-color);
+  border-radius: 0.125rem;
+  pointer-events: none;
+}
+.RangeSlider input[type=range] {
+  -webkit-appearance: none;
+  display: block;
+  width: 100%;
+  height: 0.75rem;
+  margin-bottom: 0.5rem;
+  background: transparent;
+}
+.settings-item .ListItem {
+  margin: 0 -1rem 1rem;
+}
+.settings-item .ListItem:last-child {
+  margin-bottom: 0;
+}
+.settings-item .Checkbox, .settings-item .radio-group {
+  margin: 0 -1rem 0.5rem;
+}
+.Radio {
+  display: block;
+  position: relative;
+  padding-left: 4.5rem;
+  text-align: left;
+  margin-bottom: 1.5rem;
+  line-height: 1.5rem;
+  cursor: pointer;
+}
+.Radio>input {
+  position: absolute;
+  z-index: var(--z-below);
+  opacity: 0;
+}
+.Radio .Radio-main::before, .Radio .Radio-main::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 1.0625rem;
+  top: 50%;
+  width: 1.25rem;
+  height: 1.25rem;
+  transform: translateY(-50%);
+}
+.Radio .Radio-main::before {
+  border: 2px solid var(--color-borders-input);
+  border-radius: 50%;
+  background-color: var(--color-background);
+  opacity: 1;
+  transition: border-color .1s ease,opacity .1s ease;
+}
+.Radio input:checked~.Radio-main::before {
+  border-color: var(--color-primary);
+}
+.Radio .Radio-main .label {
+  display: block;
+  word-break: break-word;
+  unicode-bidi: plaintext;
+  text-align: left;
+}
+.Radio .Radio-main::after {
+  left: 1.375rem;
+  width: 0.625rem;
+  height: 0.625rem;
+  border-radius: 50%;
+  background: var(--color-primary);
+  opacity: 0;
+  transition: opacity .1s ease;
+}
+.Radio input:checked~.Radio-main::after {
+  opacity: 1;
+}
+.RangeSlider .slider-options {
+  display: grid;
+  grid-template-rows: auto;
+  grid-auto-columns: 1fr;
+  grid-auto-flow: column;
+}
+.RangeSlider .slider-option {
+  font-size: .8125rem;
+  text-align: center;
+  cursor: pointer;
+  color: var(--color-text-secondary);
+  transition: color .2s ease;
+}
+.RangeSlider .slider-option:first-child {
+  text-align: left;
+}
+.RangeSlider .slider-option:hover, .RangeSlider .slider-option.active {
+  color: var(--color-text);
+}
+.RangeSlider .slider-option.active {
+  font-weight: 500;
+}
+.RangeSlider .slider-option:last-child {
+  text-align: right;
+}
+.Radio .Radio-main .subLabel {
+  display: block;
+  font-size: .875rem;
+  line-height: 1rem;
+  color: var(--color-text-secondary);
+  unicode-bidi: plaintext;
+}
+.settings-item .Radio+.Radio, .settings-item .Checkbox+.Checkbox {
+  margin-top: 2rem;
+}
+.SettingsDefaultReaction .ReactionStaticEmoji {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-inline-end: 2rem;
 }
