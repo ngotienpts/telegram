@@ -73,13 +73,48 @@ document.addEventListener("DOMContentLoaded", function () {
 
         var chatItems = leftColumn.querySelectorAll(".chat-item");
 
+        // 
         var settingBlock = leftColumn.querySelector(".setting-wrapper");
 
         var editSettingBlock = leftColumn.querySelector(".edit-setting-wrapper");
 
+        // General
         var showGeneral = leftColumn.querySelector(".GeneralSetting");
 
         var generalSettingBlock = leftColumn.querySelector(".general-setting-wrapper");
+
+        // Notification
+        var showNoti = leftColumn.querySelector(".Notifications");
+
+        var notiSettingBlock = leftColumn.querySelector(".notification-setting-wrapper");
+
+        // Data and Storage
+        var showData = leftColumn.querySelector(".Database");
+
+        var dataSettingBlock = leftColumn.querySelector(".data-setting-wrapper");
+
+        // Privacy
+        var showPrivacy = leftColumn.querySelector(".Privacy");
+
+        var privacySettingBlock = leftColumn.querySelector(".privacy-setting-wrapper");
+
+        // Folders
+        var showFolder = leftColumn.querySelector(".Folder");
+
+        var folderSettingBlock = leftColumn.querySelector(".folder-setting-wrapper");
+        
+        
+        // Active Sessions 
+        var showSessions = leftColumn.querySelector(".Session");
+
+        var sessionSettingBlock = leftColumn.querySelector(".sessions-setting-wrapper");
+        
+        
+        // Language 
+        var showLanguage = leftColumn.querySelector(".Language");
+
+        var languageSettingBlock = leftColumn.querySelector(".language-setting-wrapper");
+
 
         var showSetting = leftColumn.querySelector(".submenu-setting");
 
@@ -241,9 +276,99 @@ document.addEventListener("DOMContentLoaded", function () {
         showGeneral.onclick = function(){
           if(settingBlock.matches('.shown')){
             settingBlock.classList.remove('shown');
+            dataSettingBlock.classList.remove('shown');
+            notiSettingBlock.classList.remove('shown');
+            privacySettingBlock.classList.remove("shown");
+            languageSettingBlock.classList.remove("shown");
             generalSettingBlock.classList.add("shown");
           }
         }
+
+        // notification setting
+        showNoti.onclick = function(){
+          if(settingBlock.matches('.shown')){
+            settingBlock.classList.remove('shown');
+            generalSettingBlock.classList.remove("shown");
+            dataSettingBlock.classList.remove("shown");
+            privacySettingBlock.classList.remove("shown");
+            folderSettingBlock.classList.remove("shown");
+            languageSettingBlock.classList.remove("shown");
+            notiSettingBlock.classList.add("shown");
+          }
+        }
+
+
+        // data and storage setting
+        showData.onclick = function(){
+          if(settingBlock.matches('.shown')){
+            settingBlock.classList.remove('shown');
+            generalSettingBlock.classList.remove("shown");
+            notiSettingBlock.classList.remove("shown");
+            privacySettingBlock.classList.remove("shown");
+            folderSettingBlock.classList.remove("shown");
+            languageSettingBlock.classList.remove("shown");
+            dataSettingBlock.classList.add("shown");
+          }
+        }
+
+        // privacy and security
+        showPrivacy.onclick = function(){
+          if(settingBlock.matches('.shown')){
+            settingBlock.classList.remove('shown');
+            generalSettingBlock.classList.remove("shown");
+            notiSettingBlock.classList.remove("shown");
+            dataSettingBlock.classList.remove("shown");
+            folderSettingBlock.classList.remove("shown");
+            languageSettingBlock.classList.remove("shown");
+            privacySettingBlock.classList.add("shown");
+          }
+        }
+
+
+        // folder
+        showFolder.onclick = function(){
+          if(settingBlock.matches('.shown')){
+            settingBlock.classList.remove('shown');
+            generalSettingBlock.classList.remove("shown");
+            notiSettingBlock.classList.remove("shown");
+            dataSettingBlock.classList.remove("shown");
+            privacySettingBlock.classList.remove("shown");
+            languageSettingBlock.classList.remove("shown");
+            folderSettingBlock.classList.add("shown");
+          }
+        }
+        
+        
+        // active sessions
+        showSessions.onclick = function(){
+          if(settingBlock.matches('.shown')){
+            settingBlock.classList.remove('shown');
+            generalSettingBlock.classList.remove("shown");
+            notiSettingBlock.classList.remove("shown");
+            dataSettingBlock.classList.remove("shown");
+            privacySettingBlock.classList.remove("shown");
+            folderSettingBlock.classList.remove("shown");
+            languageSettingBlock.classList.remove("shown");
+            sessionSettingBlock.classList.add("shown");
+          }
+        }
+        
+        
+        // language 
+        showLanguage.onclick = function(){
+          if(settingBlock.matches('.shown')){
+            settingBlock.classList.remove('shown');
+            generalSettingBlock.classList.remove("shown");
+            notiSettingBlock.classList.remove("shown");
+            dataSettingBlock.classList.remove("shown");
+            privacySettingBlock.classList.remove("shown");
+            folderSettingBlock.classList.remove("shown");
+            sessionSettingBlock.classList.remove("shown");
+            languageSettingBlock.classList.add("shown");
+          }
+        }
+
+
 
         // 
         if(closeLeftColumn){

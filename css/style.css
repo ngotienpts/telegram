@@ -2631,7 +2631,13 @@ svg:not(:root) {
 
 .setting-wrapper,
 .edit-setting-wrapper,
-.general-setting-wrapper {
+.general-setting-wrapper,
+.notification-setting-wrapper,
+.data-setting-wrapper,
+.privacy-setting-wrapper,
+.folder-setting-wrapper,
+.sessions-setting-wrapper,
+.language-setting-wrapper {
   display: none;
 }
 
@@ -3415,6 +3421,144 @@ label {
   width: 1.5rem;
   height: 1.5rem;
   margin-inline-end: 2rem;
+}
+
+.settings-content.no-border, .settings-content.two-fa {
+  border-top: none;
+}
+
+.settings-content-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 1.5rem 1rem;
+  text-align: center;
+  background-color: var(--color-background);
+  box-shadow: inset 0 -0.0625rem 0 0 var(--color-background-secondary-accent);
+  margin-bottom: 0.625rem;
+}
+
+.settings-content-icon {
+  width: 5rem;
+  height: 5rem;
+  margin-bottom: 2.5rem;
+  position: relative;
+}
+
+.settings-content-icon .AnimatedSticker {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.Button.smaller {
+  height: 2.75rem;
+  padding: 0.3125rem;
+}
+
+.Button.fluid {
+  padding-left: 1.75rem;
+  padding-right: 1.75rem;
+  width: auto;
+}
+
+.Button.pill {
+  border-radius: 1.75rem;
+  padding-left: 1.75rem;
+  padding-right: 1.75rem;
+  text-transform: none;
+}
+
+.Button.smaller.pill {
+  height: 2.5rem;
+  border-radius: 1.25rem;
+  padding: 0.3125rem 1rem;
+  font-size: 1rem;
+}
+
+.Button.smaller.with-icon {
+  padding-left: 0.75rem;
+  padding-right: 1.25rem;
+}
+
+.Button.smaller.with-icon i {
+  font-size: 1rem;
+  margin-right: 0.5rem;
+}
+
+.Button.primary:not(.disabled):not(:disabled):hover {
+  background-color: var(--color-primary-shade);
+}
+
+.ListItem.narrow .ListItem-button {
+  padding: 0.5rem 1rem;
+}
+
+.SettingsActiveSessions .icon-device {
+  width: 2rem;
+  height: 2rem;
+  background-repeat: no-repeat;
+  background-size: 2rem;
+  flex: 0 0 2rem;
+  margin-inline-end: 1.5rem !important;
+}
+
+.SettingsActiveSessions .icon-device-chrome {
+  background-image: url("../images/chrome.e6f5deb578a9563ebc14..svg");
+}
+
+.settings-item .ListItem .multiline-menu-item {
+  white-space: initial;
+}
+
+.ListItem .user-status, .ListItem .group-status, .ListItem .title, .ListItem .subtitle {
+  text-align: initial;
+  unicode-bidi: plaintext;
+}
+
+.settings-item .ListItem .multiline-menu-item .title, .settings-item .ListItem .multiline-menu-item .subtitle {
+  display: block;
+  text-align: left;
+}
+
+.settings-item .ListItem .multiline-menu-item .title {
+  line-height: 1.25rem;
+}
+
+.settings-item .ListItem .multiline-menu-item .subtitle {
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  color: var(--color-text-secondary);
+}
+
+.settings-item .ListItem .multiline-menu-item .subtitle.black {
+  color: var(--color-text);
+}
+
+.settings-item .ListItem .multiline-menu-item .subtitle.tight {
+  line-height: 1.3125rem;
+  margin-bottom: 0.1875rem;
+}
+
+.settings-item .ListItem .multiline-menu-item .subtitle + .subtitle {
+  margin-top: -0.25rem;
+}
+
+.settings-item .ListItem .multiline-menu-item .date {
+  float: right;
+  font-size: 0.75rem;
+  margin-left: 1rem;
+  color: var(--color-text-secondary);
+}
+
+.settings-item .ListItem .multiline-menu-item.full-size {
+  width: 100%;
+}
+
+.SettingsActiveSessions .icon-device-android {
+  background-image: url("../images/android.3fd8913fc3ab8c48d039..svg");
 }
 
 .portals {

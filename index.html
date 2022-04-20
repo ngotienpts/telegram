@@ -667,6 +667,7 @@
                       <div class="ListItem no-selection Language">
                         <div class="ListItem-button" role="button" tabindex="0">
                           <i class="fas fa-language"></i>Language
+                          <span class="settings-item__current-value">English</span>
                         </div>
                       </div>
                       <!-- end item -->
@@ -747,7 +748,9 @@
               <div class="Transition zoom-fade">
                 <div class="Transition__slide--active">
                   <div class="Management">
-                    <div class="settings-content custom-scroll"><div class="settings-item pt-3"><h4 class="settings-item-header">Settings</h4><div class="RangeSlider"><div class="slider-top-row"><span class="label" dir="auto">Message Text Size</span><span class="value" dir="auto">16</span></div><div class="slider-main"><div class="slider-fill-track" style="width: 50%;"></div><input min="12" max="20" step="1" type="range" class="RangeSlider__input"></div></div><div class="ListItem no-selection"><div class="ListItem-button" role="button" tabindex="0"><i class="fas fa-image"></i>Chat Background</div></div></div><div class="settings-item"><h4 class="settings-item-header">Theme</h4><div class="radio-group"><label class="Radio"><input type="radio" name="theme" value="light"><div class="Radio-main"><span class="label">Light</span></div></label><label class="Radio"><input type="radio" name="theme" value="dark"><div class="Radio-main"><span class="label">Dark</span></div></label><label class="Radio"><input type="radio" name="theme" value="auto"><div class="Radio-main"><span class="label">System</span></div></label></div></div><div class="settings-item"><h4 class="settings-item-header">Time Format</h4><div class="radio-group"><label class="Radio"><input type="radio" name="timeformat" value="12h"><div class="Radio-main"><span class="label">12-hour</span></div></label><label class="Radio"><input type="radio" name="timeformat" value="24h"><div class="Radio-main"><span class="label">24-hour</span></div></label></div></div><div class="settings-item"><h4 class="settings-item-header">Animation Level</h4><p class="settings-item-description">Choose the desired animations amount.</p><div class="RangeSlider"><div class="slider-main"><div class="slider-fill-track" style="width: 100%;"></div><input min="0" max="2" step="1" type="range" class="RangeSlider__input"><div class="slider-options"><div class="slider-option no-selection">Solid and Steady</div><div class="slider-option no-selection">Nice and Fast</div><div class="slider-option no-selection active">Lots of Stuff</div></div></div></div></div><div class="settings-item"><h4 class="settings-item-header">Keyboard</h4><div class="radio-group"><label class="Radio"><input type="radio" name="keyboard-send-settings" value="enter"><div class="Radio-main"><span class="label">Send with Enter</span><span class="subLabel">New line by Shift + Enter</span></div></label><label class="Radio"><input type="radio" name="keyboard-send-settings" value="ctrl-enter"><div class="Radio-main"><span class="label">Send with Ctrl+Enter</span><span class="subLabel">New line by Enter</span></div></label></div></div><div class="settings-item"><h4 class="settings-item-header">Stickers</h4><div class="ListItem SettingsDefaultReaction no-selection"><div class="ListItem-button" role="button" tabindex="0"><img class="ReactionStaticEmoji" alt="" src="./images/like.webp"><div class="title">Quick Reaction</div></div></div><label class="Checkbox"><input type="checkbox"><div class="Checkbox-main"><span class="label" dir="auto">Suggest stickers by emoji</span></div></label><label class="Checkbox"><input type="checkbox"><div class="Checkbox-main"><span class="label" dir="auto">Loop Animated Stickers</span></div></label><div class="mt-4"></div></div></div>
+                    <div class="settings-content custom-scroll">
+                      <div class="settings-item pt-3"><h4 class="settings-item-header">Settings</h4><div class="RangeSlider"><div class="slider-top-row"><span class="label" dir="auto">Message Text Size</span><span class="value" dir="auto">16</span></div><div class="slider-main"><div class="slider-fill-track" style="width: 50%;"></div><input min="12" max="20" step="1" type="range" class="RangeSlider__input"></div></div><div class="ListItem no-selection"><div class="ListItem-button" role="button" tabindex="0"><i class="fas fa-image"></i>Chat Background</div></div></div><div class="settings-item"><h4 class="settings-item-header">Theme</h4><div class="radio-group"><label class="Radio"><input type="radio" name="theme" value="light"><div class="Radio-main"><span class="label">Light</span></div></label><label class="Radio"><input type="radio" name="theme" value="dark"><div class="Radio-main"><span class="label">Dark</span></div></label><label class="Radio"><input type="radio" name="theme" value="auto"><div class="Radio-main"><span class="label">System</span></div></label></div></div><div class="settings-item"><h4 class="settings-item-header">Time Format</h4><div class="radio-group"><label class="Radio"><input type="radio" name="timeformat" value="12h"><div class="Radio-main"><span class="label">12-hour</span></div></label><label class="Radio"><input type="radio" name="timeformat" value="24h"><div class="Radio-main"><span class="label">24-hour</span></div></label></div></div><div class="settings-item"><h4 class="settings-item-header">Animation Level</h4><p class="settings-item-description">Choose the desired animations amount.</p><div class="RangeSlider"><div class="slider-main"><div class="slider-fill-track" style="width: 100%;"></div><input min="0" max="2" step="1" type="range" class="RangeSlider__input"><div class="slider-options"><div class="slider-option no-selection">Solid and Steady</div><div class="slider-option no-selection">Nice and Fast</div><div class="slider-option no-selection active">Lots of Stuff</div></div></div></div></div><div class="settings-item"><h4 class="settings-item-header">Keyboard</h4><div class="radio-group"><label class="Radio"><input type="radio" name="keyboard-send-settings" value="enter"><div class="Radio-main"><span class="label">Send with Enter</span><span class="subLabel">New line by Shift + Enter</span></div></label><label class="Radio"><input type="radio" name="keyboard-send-settings" value="ctrl-enter"><div class="Radio-main"><span class="label">Send with Ctrl+Enter</span><span class="subLabel">New line by Enter</span></div></label></div></div><div class="settings-item"><h4 class="settings-item-header">Stickers</h4><div class="ListItem SettingsDefaultReaction no-selection"><div class="ListItem-button" role="button" tabindex="0"><img class="ReactionStaticEmoji" alt="" src="./images/like.webp"><div class="title">Quick Reaction</div></div></div><label class="Checkbox"><input type="checkbox"><div class="Checkbox-main"><span class="label" dir="auto">Suggest stickers by emoji</span></div></label><label class="Checkbox"><input type="checkbox"><div class="Checkbox-main"><span class="label" dir="auto">Loop Animated Stickers</span></div></label><div class="mt-4"></div></div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -755,6 +758,180 @@
             </div>
           </div>
           <!-- end general setting -->
+
+          <!-- notofication -->
+          <div class="Transition notification-setting-wrapper">
+            <div class="LeftColumn__Setting">
+              <!-- header -->
+              <div class="LeftHeader">
+                <button type="button" class="Button close-button close-left-column smaller translucent round" aria-label="Close" title="Close">
+                  <i class="fas fa-arrow-left animated-close-icon-left"></i>
+                </button>
+                <div class="Transition slide-fade" style="overflow: visible;">
+                  <div class="Transition__slide--active">
+                    <h3>Notification</h3>
+                  </div>
+                </div>
+              </div>
+              <!-- end header -->
+              <!-- container -->
+              <div class="Transition zoom-fade">
+                <div class="Transition__slide--active">
+                  <div class="Management">
+                    <div class="settings-content custom-scroll">
+                      <div class="settings-item"><h4 class="settings-item-header">Web notifications</h4><label class="Checkbox"><input type="checkbox"><div class="Checkbox-main"><span class="label" dir="auto">Web notifications</span><span class="subLabel" dir="auto">Enabled</span></div></label><label class="Checkbox"><input type="checkbox"><div class="Checkbox-main"><span class="label" dir="auto">Offline notifications</span><span class="subLabel" dir="auto">Enabled</span></div></label><div class="settings-item-slider"><div class="RangeSlider"><div class="slider-top-row"><span class="label" dir="auto">Sound</span><span class="value" dir="auto">5</span></div><div class="slider-main"><div class="slider-fill-track" style="width: 50%;"></div><input min="0" max="10" step="1" type="range" class="RangeSlider__input"></div></div></div></div><div class="settings-item"><h4 class="settings-item-header">Private Chats</h4><label class="Checkbox"><input type="checkbox"><div class="Checkbox-main"><span class="label" dir="auto">Notifications for private chats</span><span class="subLabel" dir="auto">Enabled</span></div></label><label class="Checkbox"><input type="checkbox"><div class="Checkbox-main"><span class="label" dir="auto">Message Preview</span><span class="subLabel" dir="auto">Enabled</span></div></label></div><div class="settings-item"><h4 class="settings-item-header">Groups</h4><label class="Checkbox"><input type="checkbox"><div class="Checkbox-main"><span class="label" dir="auto">Notifications for groups</span><span class="subLabel" dir="auto">Enabled</span></div></label><label class="Checkbox"><input type="checkbox"><div class="Checkbox-main"><span class="label" dir="auto">Message Preview</span><span class="subLabel" dir="auto">Enabled</span></div></label></div><div class="settings-item"><h4 class="settings-item-header">Channels</h4><label class="Checkbox"><input type="checkbox"><div class="Checkbox-main"><span class="label" dir="auto">Notifications for channels</span><span class="subLabel" dir="auto">Enabled</span></div></label><label class="Checkbox"><input type="checkbox"><div class="Checkbox-main"><span class="label" dir="auto">Message Preview</span><span class="subLabel" dir="auto">Enabled</span></div></label></div><div class="settings-item"><h4 class="settings-item-header">Other</h4><label class="Checkbox"><input type="checkbox"><div class="Checkbox-main"><span class="label" dir="auto">Contact joined Telegram</span></div></label></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- end container -->
+            </div>
+          </div>
+          <!-- end notofication -->
+
+          <!-- database -->
+          <div class="Transition data-setting-wrapper">
+            <div class="LeftColumn__Setting">
+              <!-- header -->
+              <div class="LeftHeader">
+                <button type="button" class="Button close-button close-left-column smaller translucent round" aria-label="Close" title="Close">
+                  <i class="fas fa-arrow-left animated-close-icon-left"></i>
+                </button>
+                <div class="Transition slide-fade" style="overflow: visible;">
+                  <div class="Transition__slide--active">
+                    <h3>Data and Storage</h3>
+                  </div>
+                </div>
+              </div>
+              <!-- end header -->
+              <!-- container -->
+              <div class="Transition zoom-fade">
+                <div class="Transition__slide--active">
+                  <div class="Management">
+                    <div class="settings-content custom-scroll">
+                      <div class="settings-item"><h4 class="settings-item-header">Auto-download photos</h4><label class="Checkbox"><input type="checkbox"><div class="Checkbox-main"><span class="label" dir="auto">Contacts</span></div></label><label class="Checkbox"><input type="checkbox"><div class="Checkbox-main"><span class="label" dir="auto">Other Private Chats</span></div></label><label class="Checkbox"><input type="checkbox"><div class="Checkbox-main"><span class="label" dir="auto">Group Chats</span></div></label><label class="Checkbox"><input type="checkbox"><div class="Checkbox-main"><span class="label" dir="auto">Channels</span></div></label></div><div class="settings-item"><h4 class="settings-item-header">Auto-download videos and GIFs</h4><label class="Checkbox"><input type="checkbox"><div class="Checkbox-main"><span class="label" dir="auto">Contacts</span></div></label><label class="Checkbox"><input type="checkbox"><div class="Checkbox-main"><span class="label" dir="auto">Other Private Chats</span></div></label><label class="Checkbox"><input type="checkbox"><div class="Checkbox-main"><span class="label" dir="auto">Group Chats</span></div></label><label class="Checkbox"><input type="checkbox"><div class="Checkbox-main"><span class="label" dir="auto">Channels</span></div></label></div><div class="settings-item"><h4 class="settings-item-header">Auto-download files</h4><label class="Checkbox"><input type="checkbox"><div class="Checkbox-main"><span class="label" dir="auto">Contacts</span></div></label><label class="Checkbox"><input type="checkbox"><div class="Checkbox-main"><span class="label" dir="auto">Other Private Chats</span></div></label><label class="Checkbox"><input type="checkbox"><div class="Checkbox-main"><span class="label" dir="auto">Group Chats</span></div></label><label class="Checkbox"><input type="checkbox"><div class="Checkbox-main"><span class="label" dir="auto">Channels</span></div></label><div class="pt-5"><div class="RangeSlider"><div class="slider-top-row"><span class="label" dir="auto">Maximum file size</span><span class="value" dir="auto">up to 10 MB</span></div><div class="slider-main"><div class="slider-fill-track" style="width: 40%;"></div><input min="0" max="5" step="1" type="range" class="RangeSlider__input"></div></div></div></div><div class="settings-item"><h4 class="settings-item-header">Auto-play media</h4><label class="Checkbox"><input type="checkbox"><div class="Checkbox-main"><span class="label" dir="auto">GIFs</span></div></label><label class="Checkbox"><input type="checkbox"><div class="Checkbox-main"><span class="label" dir="auto">Videos</span></div></label></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- end container -->
+            </div>
+          </div>
+          <!-- end database -->
+
+          <!-- Privacy and Security -->
+          <div class="Transition privacy-setting-wrapper">
+            <div class="LeftColumn__Setting">
+              <!-- header -->
+              <div class="LeftHeader">
+                <button type="button" class="Button close-button close-left-column smaller translucent round" aria-label="Close" title="Close">
+                  <i class="fas fa-arrow-left animated-close-icon-left"></i>
+                </button>
+                <div class="Transition slide-fade" style="overflow: visible;">
+                  <div class="Transition__slide--active">
+                    <h3>Privacy and Security</h3>
+                  </div>
+                </div>
+              </div>
+              <!-- end header -->
+              <!-- container -->
+              <div class="Transition zoom-fade">
+                <div class="Transition__slide--active">
+                  <div class="Management">
+                    <div class="settings-content custom-scroll"><div class="settings-item pt-3"><div class="ListItem no-selection narrow"><div class="ListItem-button" role="button" tabindex="0"><i class="icon-delete-user"></i><div class="multiline-menu-item"><span class="title">Blocked Users</span></div></div></div><div class="ListItem no-selection narrow"><div class="ListItem-button" role="button" tabindex="0"><i class="icon-lock"></i><div class="multiline-menu-item"><span class="title">Two-Step Verification</span><span class="subtitle" dir="auto">Off</span></div></div></div></div><div class="settings-item"><h4 class="settings-item-header mb-4">Privacy</h4><div class="ListItem no-icon no-selection narrow"><div class="ListItem-button" role="button" tabindex="0"><div class="multiline-menu-item"><span class="title">Who can see my phone number?</span><span class="subtitle" dir="auto">My Contacts</span></div></div></div><div class="ListItem no-icon no-selection narrow"><div class="ListItem-button" role="button" tabindex="0"><div class="multiline-menu-item"><span class="title">Who can see your Last Seen time?</span><span class="subtitle" dir="auto">Everybody</span></div></div></div><div class="ListItem no-icon no-selection narrow"><div class="ListItem-button" role="button" tabindex="0"><div class="multiline-menu-item"><span class="title">Who can see my profile photos &amp; videos?</span><span class="subtitle" dir="auto">Everybody</span></div></div></div><div class="ListItem no-icon no-selection narrow"><div class="ListItem-button" role="button" tabindex="0"><div class="multiline-menu-item"><span class="title">Who can add a link to my account when forwarding my messages?</span><span class="subtitle" dir="auto">Everybody</span></div></div></div><div class="ListItem no-icon no-selection narrow"><div class="ListItem-button" role="button" tabindex="0"><div class="multiline-menu-item"><span class="title">Who can add me to group chats?</span><span class="subtitle" dir="auto">Everybody</span></div></div></div></div><div class="settings-item"><h4 class="settings-item-header">Sensitive content</h4><label class="Checkbox"><input type="checkbox"><div class="Checkbox-main"><span class="label" dir="auto">Disable filtering</span><span class="subLabel" dir="auto">Display sensitive media in public channels on all your Telegram devices.</span></div></label></div></div>
+                  </div>
+                </div>
+              </div>
+              <!-- end container -->
+            </div>
+          </div>
+          <!-- end Privacy and Security -->
+
+          <!-- folders -->
+          <div class="Transition folder-setting-wrapper">
+            <div class="LeftColumn__Setting">
+              <!-- header -->
+              <div class="LeftHeader">
+                <button type="button" class="Button close-button close-left-column smaller translucent round" aria-label="Close" title="Close">
+                  <i class="fas fa-arrow-left animated-close-icon-left"></i>
+                </button>
+                <div class="Transition slide-fade" style="overflow: visible;">
+                  <div class="Transition__slide--active">
+                    <h3>Folders</h3>
+                  </div>
+                </div>
+              </div>
+              <!-- end header -->
+              <!-- container -->
+              <div class="Transition zoom-fade">
+                <div class="Transition__slide--active">
+                  <div class="Management">
+                    <div class="settings-content no-border custom-scroll"><div class="settings-content-header"><div class="settings-content-icon"><div class="AnimatedSticker" style="width: 100px; height: 100px;"><img src="./images/folder.png" alt=""></div></div><p class="settings-item-description mb-3" dir="auto">Create folders for different groups of chats and quickly switch between them.</p><button type="button" class="Button with-icon mb-2 smaller primary pill fluid"><i class="fas fa-plus"></i>Create New Folder</button></div><div class="settings-item pt-3"><h4 class="settings-item-header mb-3">Folders</h4><p class="settings-item-description my-4" dir="auto">You have no folders yet.</p></div></div>
+                  </div>
+                </div>
+              </div>
+              <!-- end container -->
+            </div>
+          </div>
+          <!-- end folders -->
+
+          <!-- Active Sessions -->
+          <div class="Transition sessions-setting-wrapper">
+            <div class="LeftColumn__Setting">
+              <!-- header -->
+              <div class="LeftHeader">
+                <button type="button" class="Button close-button close-left-column smaller translucent round" aria-label="Close" title="Close">
+                  <i class="fas fa-arrow-left animated-close-icon-left"></i>
+                </button>
+                <div class="Transition slide-fade" style="overflow: visible;">
+                  <div class="Transition__slide--active">
+                    <h3>Active Sessions</h3>
+                  </div>
+                </div>
+              </div>
+              <!-- end header -->
+              <!-- container -->
+              <div class="Transition zoom-fade">
+                <div class="Transition__slide--active">
+                  <div class="Management">
+                    <div class="settings-content custom-scroll SettingsActiveSessions"><div class="settings-item"><h4 class="settings-item-header mb-4">CURRENT SESSION</h4><div class="ListItem no-selection narrow inactive"><div class="ListItem-button" role="button" tabindex="0"><i class="icon-device-chrome icon-device"></i><div class="multiline-menu-item" dir="auto"><span class="title" dir="auto">Chrome 100</span><span class="subtitle black tight">Telegram Web 1.42.1 Z, Windows </span><span class="subtitle">27.79.204.224 - Hanoi, Vietnam</span></div></div></div><div class="ListItem destructive mb-0 no-icon no-selection has-ripple narrow"><div class="ListItem-button" role="button" tabindex="0"><i class="fas fa-ban"></i>Terminate All Other Sessions</div></div></div><div class="settings-item"><h4 class="settings-item-header mb-4">Active sessions</h4><div class="ListItem no-selection has-ripple narrow"><div class="ListItem-button" role="button" tabindex="0"><i class="icon-device-chrome icon-device"></i><div class="multiline-menu-item full-size" dir="auto"><span class="date">Mon</span><span class="title">Chrome 100</span><span class="subtitle black tight">Telegram Web 1.41.2 Z, Windows </span><span class="subtitle">2402:0800:61b1:dc6f:24e8:4ecc:4536:39a5 Hanoi, Vietnam</span></div></div></div><div class="ListItem no-selection has-ripple narrow"><div class="ListItem-button" role="button" tabindex="0"><i class="icon-device-android icon-device"></i><div class="multiline-menu-item full-size" dir="auto"><span class="date">Thu</span><span class="title">Xiaomi Redmi 5 Plus</span><span class="subtitle black tight">Telegram Android 8.6.2, Android 9 P (28)</span><span class="subtitle">27.67.183.119 Hanoi, Vietnam</span></div></div></div></div></div>
+                  </div>
+                </div>
+              </div>
+              <!-- end container -->
+            </div>
+          </div>
+          <!-- end Active Sessions -->
+
+
+          <!-- language -->
+          <div class="Transition language-setting-wrapper">
+            <div class="LeftColumn__Setting">
+              <!-- header -->
+              <div class="LeftHeader">
+                <button type="button" class="Button close-button close-left-column smaller translucent round" aria-label="Close" title="Close">
+                  <i class="fas fa-arrow-left animated-close-icon-left"></i>
+                </button>
+                <div class="Transition slide-fade" style="overflow: visible;">
+                  <div class="Transition__slide--active">
+                    <h3>Language</h3>
+                  </div>
+                </div>
+              </div>
+              <!-- end header -->
+              <!-- container -->
+              <div class="Transition zoom-fade">
+                <div class="Transition__slide--active">
+                  <div class="Management">
+                    <div class="settings-content settings-item settings-language custom-scroll settings-item--first"><div class="radio-group"><label class="Radio"><input type="radio" name="keyboard-send-settings" value="en" checked><div class="Radio-main"><span class="label">English</span><span class="subLabel">English</span></div></label><label class="Radio"><input type="radio" name="keyboard-send-settings" value="ar"><div class="Radio-main"><span class="label">العربية</span><span class="subLabel">Arabic</span></div></label><label class="Radio"><input type="radio" name="keyboard-send-settings" value="be"><div class="Radio-main"><span class="label">Беларуская</span><span class="subLabel">Belarusian</span></div></label><label class="Radio"><input type="radio" name="keyboard-send-settings" value="ca"><div class="Radio-main"><span class="label">Català</span><span class="subLabel">Catalan</span></div></label><label class="Radio"><input type="radio" name="keyboard-send-settings" value="nl"><div class="Radio-main"><span class="label">Nederlands</span><span class="subLabel">Dutch</span></div></label><label class="Radio"><input type="radio" name="keyboard-send-settings" value="fr"><div class="Radio-main"><span class="label">Français</span><span class="subLabel">French</span></div></label><label class="Radio"><input type="radio" name="keyboard-send-settings" value="de"><div class="Radio-main"><span class="label">Deutsch</span><span class="subLabel">German</span></div></label><label class="Radio"><input type="radio" name="keyboard-send-settings" value="id"><div class="Radio-main"><span class="label">Bahasa Indonesia</span><span class="subLabel">Indonesian</span></div></label><label class="Radio"><input type="radio" name="keyboard-send-settings" value="it"><div class="Radio-main"><span class="label">Italiano</span><span class="subLabel">Italian</span></div></label><label class="Radio"><input type="radio" name="keyboard-send-settings" value="ko"><div class="Radio-main"><span class="label">한국어</span><span class="subLabel">Korean</span></div></label><label class="Radio"><input type="radio" name="keyboard-send-settings" value="ms"><div class="Radio-main"><span class="label">Bahasa Melayu</span><span class="subLabel">Malay</span></div></label><label class="Radio"><input type="radio" name="keyboard-send-settings" value="fa"><div class="Radio-main"><span class="label">فارسی</span><span class="subLabel">Persian</span></div></label><label class="Radio"><input type="radio" name="keyboard-send-settings" value="pl"><div class="Radio-main"><span class="label">Polski</span><span class="subLabel">Polish</span></div></label><label class="Radio"><input type="radio" name="keyboard-send-settings" value="pt-br"><div class="Radio-main"><span class="label">Português (Brasil)</span><span class="subLabel">Portuguese (Brazil)</span></div></label><label class="Radio"><input type="radio" name="keyboard-send-settings" value="ru"><div class="Radio-main"><span class="label">Русский</span><span class="subLabel">Russian</span></div></label><label class="Radio"><input type="radio" name="keyboard-send-settings" value="es"><div class="Radio-main"><span class="label">Español</span><span class="subLabel">Spanish</span></div></label><label class="Radio"><input type="radio" name="keyboard-send-settings" value="tr"><div class="Radio-main"><span class="label">Türkçe</span><span class="subLabel">Turkish</span></div></label><label class="Radio"><input type="radio" name="keyboard-send-settings" value="uk"><div class="Radio-main"><span class="label">Українська</span><span class="subLabel">Ukrainian</span></div></label><label class="Radio"><input type="radio" name="keyboard-send-settings" value="uz"><div class="Radio-main"><span class="label">O‘zbek</span><span class="subLabel">Uzbek</span></div></label></div></div>
+                  </div>
+                </div>
+              </div>
+              <!-- end container -->
+            </div>
+          </div>
+          <!-- end language -->
+
         </section>
         <!-- end left -->
         <!-- middle -->
