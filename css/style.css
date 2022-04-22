@@ -3258,10 +3258,15 @@ label {
   margin-bottom: 0.625rem;
 }
 
-.RangeSlider .slider-top-row .value {
+.RangeSlider .slider-top-row .value,
+.RangeSlider .slider-top-row .value-fix {
   flex-shrink: 0;
   margin-left: 1rem;
   color: var(--color-text-secondary);
+}
+
+.RangeSlider .slider-top-row .value-fix .value {
+  margin-left: 0;
 }
 
 .RangeSlider .slider-main {
@@ -3300,6 +3305,7 @@ label {
   height: 0.75rem;
   margin-bottom: 0.5rem;
   background: transparent;
+  cursor: pointer;
 }
 
 .settings-item .ListItem {
@@ -3559,6 +3565,10 @@ label {
 
 .SettingsActiveSessions .icon-device-android {
   background-image: url("../images/android.3fd8913fc3ab8c48d039..svg");
+}
+
+.Button.text.primary:not(.disabled):not(:disabled):hover {
+  background-color: rgba(var(--color-primary-shade-rgb), 0.08);
 }
 
 .portals {

@@ -128,6 +128,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
         var extendSettingBlock = leftColumn.querySelector('.settings-more-menu');
 
+        // input range
+        var inputRanges = leftColumn.querySelectorAll('.RangeSlider__input');
+        // fillTrack
+
 
 
         searchInput.querySelector("#telegram-search-input").onfocus =
@@ -401,6 +405,26 @@ document.addEventListener("DOMContentLoaded", function () {
           showExtendSetting.onclick = function(){
             extendSettingBlock.firstElementChild.classList.toggle('open')
           }
+        }
+
+
+        // 
+        if(inputRanges){
+          inputRanges.forEach(function(index){
+            var valueMin = index.min;
+            var valueMax = index.max;
+            var valueText = index.parentElement.parentElement.querySelector('.value');
+            index.parentElement.firstElementChild.style.width = 
+              (((index.value - valueMin) / (valueMax - valueMin))*100) + '%';
+            if(valueText){
+              valueText.innerText = index.value;
+            }
+            index.oninput = function(){
+              index.parentElement.firstElementChild.style.width = 
+              (((index.value - valueMin) / (valueMax - valueMin))*100) + '%';
+              valueText.innerText = index.value;
+            }
+          })
         }
       }
 
