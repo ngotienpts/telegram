@@ -16,7 +16,6 @@
     <link rel="stylesheet" href="./slick/slick-1.8.1/slick/slick-theme.css">
     <link rel="stylesheet" href="./font-awesome/fontawesome-free-5.15.4-web/css/all.min.css">
     <link rel="stylesheet" href="./css/style.css" />
-    <link rel="stylesheet" href="./css/responsive.css" />
     <script src="./jquery/jquery.js"></script>
   </head>
 
@@ -178,7 +177,8 @@
                     <!-- serch input -->
                     <div class="SearchInput">
                       <input id="telegram-search-input" type="text" placeholder="Search" class="form-control" autocomplete="off">
-                     <i class="fas fa-search"></i>
+                     <!-- <i class="fas fa-search"></i> -->
+                     <img src="./images/svg/search-gray.svg" class="icon icon-16" alt="">
                     </div>
                     <!-- end serch input -->
                   </div>
@@ -284,22 +284,22 @@
                   <div id="slide-2" class="Transition___slide">
                     <!-- tablist -->
                     <div class="TabList no-selection no-scrollbar">
-                      <div class="Tab">
+                      <div class="Tab js__tabItem tab-active">
                         <span>Chats</span>
                       </div>
-                      <div class="Tab">
+                      <div class="Tab js__tabItem">
                         <span>Media</span>
                       </div>
-                      <div class="Tab">
+                      <div class="Tab js__tabItem">
                         <span>Links</span>
                       </div>
-                      <div class="Tab">
+                      <div class="Tab js__tabItem">
                         <span>Files</span>
                       </div>
-                      <div class="Tab">
+                      <div class="Tab js__tabItem">
                         <span>Music</span>
                       </div>
-                      <div class="Tab">
+                      <div class="Tab js__tabItem">
                         <span>Voice</span>
                       </div>
                     </div>
@@ -307,9 +307,121 @@
                     <div class="RecentContacts custom-scroll">
                       <div class="Tab-content">
                         <!-- pane -->
-                        <div class="Tab-pane">
+                        <div class="Tab-pane js__tabPane pane-active">
                           <!-- top section-->
                           <div class="recent-top">
+                            <!-- item -->
+                            <div class="recent-top__item">
+                              <!-- status -->
+                              <div class="recent-top__img">
+                                <img src="./images/3.jpg" alt="" class="chat-img">
+                              </div>
+                              <!-- end status -->
+                              <!-- info -->
+                              <div class="recent-top__name">
+                                <h3>Nguyen Van A</h3>
+                              </div>
+                              <!-- end info -->
+                            </div>
+                            <!-- item -->
+                            <!-- item -->
+                            <div class="recent-top__item">
+                              <!-- status -->
+                              <div class="recent-top__img">
+                                <img src="./images/3.jpg" alt="" class="chat-img">
+                              </div>
+                              <!-- end status -->
+                              <!-- info -->
+                              <div class="recent-top__name">
+                                <h3>Nguyen Van A</h3>
+                              </div>
+                              <!-- end info -->
+                            </div>
+                            <!-- item -->
+                            <!-- item -->
+                            <div class="recent-top__item">
+                              <!-- status -->
+                              <div class="recent-top__img">
+                                <img src="./images/3.jpg" alt="" class="chat-img">
+                              </div>
+                              <!-- end status -->
+                              <!-- info -->
+                              <div class="recent-top__name">
+                                <h3>Nguyen Van A</h3>
+                              </div>
+                              <!-- end info -->
+                            </div>
+                            <!-- item -->
+                            <!-- item -->
+                            <div class="recent-top__item">
+                              <!-- status -->
+                              <div class="recent-top__img">
+                                <img src="./images/3.jpg" alt="" class="chat-img">
+                              </div>
+                              <!-- end status -->
+                              <!-- info -->
+                              <div class="recent-top__name">
+                                <h3>Nguyen Van A</h3>
+                              </div>
+                              <!-- end info -->
+                            </div>
+                            <!-- item -->
+                            <!-- item -->
+                            <div class="recent-top__item">
+                              <!-- status -->
+                              <div class="recent-top__img">
+                                <img src="./images/3.jpg" alt="" class="chat-img">
+                              </div>
+                              <!-- end status -->
+                              <!-- info -->
+                              <div class="recent-top__name">
+                                <h3>Nguyen Van A</h3>
+                              </div>
+                              <!-- end info -->
+                            </div>
+                            <!-- item -->
+                            <!-- item -->
+                            <div class="recent-top__item">
+                              <!-- status -->
+                              <div class="recent-top__img">
+                                <img src="./images/3.jpg" alt="" class="chat-img">
+                              </div>
+                              <!-- end status -->
+                              <!-- info -->
+                              <div class="recent-top__name">
+                                <h3>Nguyen Van A</h3>
+                              </div>
+                              <!-- end info -->
+                            </div>
+                            <!-- item -->
+                            <!-- item -->
+                            <div class="recent-top__item">
+                              <!-- status -->
+                              <div class="recent-top__img">
+                                <img src="./images/3.jpg" alt="" class="chat-img">
+                              </div>
+                              <!-- end status -->
+                              <!-- info -->
+                              <div class="recent-top__name">
+                                <h3>Nguyen Van A</h3>
+                              </div>
+                              <!-- end info -->
+                            </div>
+                            <!-- item -->
+                            <!-- item -->
+                            <div class="recent-top__item">
+                              <!-- status -->
+                              <div class="recent-top__img">
+                                <img src="./images/3.jpg" alt="" class="chat-img">
+                              </div>
+                              <!-- end status -->
+                              <!-- info -->
+                              <div class="recent-top__name">
+                                <h3>Nguyen Van A</h3>
+                              </div>
+                              <!-- end info -->
+                            </div>
+                            <!-- item -->
                             <!-- item -->
                             <div class="recent-top__item">
                               <!-- status -->
@@ -420,33 +532,236 @@
                               <!-- end info -->
                             </div>
                             <!-- item -->
+                            <!-- item -->
+                            <div class="chat-item">
+                              <!-- status -->
+                              <div class="chat-status">
+                                <img src="./images/3.jpg" alt="" class="chat-img">
+                              </div>
+                              <!-- end status -->
+                              <!-- info -->
+                              <div class="chat-info">
+                                <!-- title -->
+                                <div class="chat-title">
+                                  <h3 class="chat-heading">Nguyen Van A</h3>
+                                  <div class="LastMesageMeta">
+                                    <div class="MessageOutgoingStatus">
+                                      <i class="fas fa-check"></i>
+                                    </div>
+                                    <span class="chat-time">Mon</span>
+                                  </div>
+                                </div>
+                                <!-- end title -->
+                                <!-- subtitle -->
+                                <div class="chat-subtitle">
+                                  <p class="last-message fix-text" >last seen recenly</p>
+                                </div>
+                                <!-- end subtitle -->
+                              </div>
+                              <!-- end info -->
+                            </div>
+                            <!-- item -->
+                            <!-- item -->
+                            <div class="chat-item">
+                              <!-- status -->
+                              <div class="chat-status">
+                                <img src="./images/3.jpg" alt="" class="chat-img">
+                              </div>
+                              <!-- end status -->
+                              <!-- info -->
+                              <div class="chat-info">
+                                <!-- title -->
+                                <div class="chat-title">
+                                  <h3 class="chat-heading">Nguyen Van A</h3>
+                                  <div class="LastMesageMeta">
+                                    <div class="MessageOutgoingStatus">
+                                      <i class="fas fa-check"></i>
+                                    </div>
+                                    <span class="chat-time">Mon</span>
+                                  </div>
+                                </div>
+                                <!-- end title -->
+                                <!-- subtitle -->
+                                <div class="chat-subtitle">
+                                  <p class="last-message fix-text" >last seen recenly</p>
+                                </div>
+                                <!-- end subtitle -->
+                              </div>
+                              <!-- end info -->
+                            </div>
+                            <!-- item -->
+                            <!-- item -->
+                            <div class="chat-item">
+                              <!-- status -->
+                              <div class="chat-status">
+                                <img src="./images/3.jpg" alt="" class="chat-img">
+                              </div>
+                              <!-- end status -->
+                              <!-- info -->
+                              <div class="chat-info">
+                                <!-- title -->
+                                <div class="chat-title">
+                                  <h3 class="chat-heading">Nguyen Van A</h3>
+                                  <div class="LastMesageMeta">
+                                    <div class="MessageOutgoingStatus">
+                                      <i class="fas fa-check"></i>
+                                    </div>
+                                    <span class="chat-time">Mon</span>
+                                  </div>
+                                </div>
+                                <!-- end title -->
+                                <!-- subtitle -->
+                                <div class="chat-subtitle">
+                                  <p class="last-message fix-text" >last seen recenly</p>
+                                </div>
+                                <!-- end subtitle -->
+                              </div>
+                              <!-- end info -->
+                            </div>
+                            <!-- item -->
+                            <!-- item -->
+                            <div class="chat-item">
+                              <!-- status -->
+                              <div class="chat-status">
+                                <img src="./images/3.jpg" alt="" class="chat-img">
+                              </div>
+                              <!-- end status -->
+                              <!-- info -->
+                              <div class="chat-info">
+                                <!-- title -->
+                                <div class="chat-title">
+                                  <h3 class="chat-heading">Nguyen Van A</h3>
+                                  <div class="LastMesageMeta">
+                                    <div class="MessageOutgoingStatus">
+                                      <i class="fas fa-check"></i>
+                                    </div>
+                                    <span class="chat-time">Mon</span>
+                                  </div>
+                                </div>
+                                <!-- end title -->
+                                <!-- subtitle -->
+                                <div class="chat-subtitle">
+                                  <p class="last-message fix-text" >last seen recenly</p>
+                                </div>
+                                <!-- end subtitle -->
+                              </div>
+                              <!-- end info -->
+                            </div>
+                            <!-- item -->
+                            <!-- item -->
+                            <div class="chat-item">
+                              <!-- status -->
+                              <div class="chat-status">
+                                <img src="./images/3.jpg" alt="" class="chat-img">
+                              </div>
+                              <!-- end status -->
+                              <!-- info -->
+                              <div class="chat-info">
+                                <!-- title -->
+                                <div class="chat-title">
+                                  <h3 class="chat-heading">Nguyen Van A</h3>
+                                  <div class="LastMesageMeta">
+                                    <div class="MessageOutgoingStatus">
+                                      <i class="fas fa-check"></i>
+                                    </div>
+                                    <span class="chat-time">Mon</span>
+                                  </div>
+                                </div>
+                                <!-- end title -->
+                                <!-- subtitle -->
+                                <div class="chat-subtitle">
+                                  <p class="last-message fix-text" >last seen recenly</p>
+                                </div>
+                                <!-- end subtitle -->
+                              </div>
+                              <!-- end info -->
+                            </div>
+                            <!-- item -->
+                            <!-- item -->
+                            <div class="chat-item">
+                              <!-- status -->
+                              <div class="chat-status">
+                                <img src="./images/3.jpg" alt="" class="chat-img">
+                              </div>
+                              <!-- end status -->
+                              <!-- info -->
+                              <div class="chat-info">
+                                <!-- title -->
+                                <div class="chat-title">
+                                  <h3 class="chat-heading">Nguyen Van A</h3>
+                                  <div class="LastMesageMeta">
+                                    <div class="MessageOutgoingStatus">
+                                      <i class="fas fa-check"></i>
+                                    </div>
+                                    <span class="chat-time">Mon</span>
+                                  </div>
+                                </div>
+                                <!-- end title -->
+                                <!-- subtitle -->
+                                <div class="chat-subtitle">
+                                  <p class="last-message fix-text" >last seen recenly</p>
+                                </div>
+                                <!-- end subtitle -->
+                              </div>
+                              <!-- end info -->
+                            </div>
+                            <!-- item -->
+                            <!-- item -->
+                            <div class="chat-item">
+                              <!-- status -->
+                              <div class="chat-status">
+                                <img src="./images/3.jpg" alt="" class="chat-img">
+                              </div>
+                              <!-- end status -->
+                              <!-- info -->
+                              <div class="chat-info">
+                                <!-- title -->
+                                <div class="chat-title">
+                                  <h3 class="chat-heading">Nguyen Van A</h3>
+                                  <div class="LastMesageMeta">
+                                    <div class="MessageOutgoingStatus">
+                                      <i class="fas fa-check"></i>
+                                    </div>
+                                    <span class="chat-time">Mon</span>
+                                  </div>
+                                </div>
+                                <!-- end title -->
+                                <!-- subtitle -->
+                                <div class="chat-subtitle">
+                                  <p class="last-message fix-text" >last seen recenly</p>
+                                </div>
+                                <!-- end subtitle -->
+                              </div>
+                              <!-- end info -->
+                            </div>
+                            <!-- item -->
                             </div>
                           </div>
                           <!-- end second section -->
                         </div>
                         <!-- end pane -->
                         <!-- pane -->
-                        <div class="Tab-pane">
+                        <div class="Tab-pane js__tabPane">
                           hello1111111111111111
                         </div>
                         <!-- end pane -->
                         <!-- pane -->
-                        <div class="Tab-pane">
+                        <div class="Tab-pane js__tabPane">
                           hello22
                         </div>
                         <!-- end pane -->
                         <!-- pane -->
-                        <div class="Tab-pane">
+                        <div class="Tab-pane js__tabPane">
                           hello3333333333333333
                         </div>
                         <!-- end pane -->
                         <!-- pane -->
-                        <div class="Tab-pane">
+                        <div class="Tab-pane js__tabPane">
                           hello44
                         </div>
                         <!-- end pane -->
                         <!-- pane -->
-                        <div class="Tab-pane">
+                        <div class="Tab-pane js__tabPane">
                           hello555555555555555
                         </div>
                         <!-- end pane -->

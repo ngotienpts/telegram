@@ -1,3 +1,7 @@
+.icon-16 {
+  width: 16px;
+  height: auto;
+}
 #UiLoader {
   height: 100%;
 }
@@ -157,7 +161,8 @@
     calc(2.625rem - var(--border-width)) calc(0.5rem - var(--border-width))
     calc(2.75rem - var(--border-width));
 }
-.SearchInput > i {
+.SearchInput > i,
+.SearchInput > .icon {
   position: absolute;
   top: 50%;
   left: 0.75rem;
@@ -192,7 +197,8 @@
   caret-color: var(--color-primary);
   background-color: var(--color-background);
 }
-.SearchInput.has-focus input + i {
+.SearchInput.has-focus input + i,
+.SearchInput.has-focus input + .icon {
   color: var(--color-primary);
 }
 .form-control:focus {
@@ -216,7 +222,7 @@
 }
 .chat-list {
   background: var(--color-background);
-  height: 100%;
+  height: calc(100% - 50px);
   padding: 0.5rem 0.125rem 0.5rem 0.4375rem;
   overflow-y: auto;
 }
@@ -292,7 +298,8 @@
   margin-right: 0.125rem;
   font-size: 1.125rem;
 }
-.MessageOutgoingStatus i {
+.MessageOutgoingStatus i,
+.MessageOutgoingStatus .icon {
   background: var(--background-color);
   font-size: 0.75rem;
 }
@@ -348,7 +355,8 @@ body:not(.is-ios) .custom-scroll::-webkit-scrollbar {
 .FloatingActionButton.revealed {
   transform: translateY(calc(0rem - var(--group-call-header-height, 0rem)));
 }
-.Button.round i {
+.Button.round i,
+.Button.round .icon {
   font-size: 1rem;
 }
 .NewChatButton.revealed {
@@ -460,15 +468,18 @@ body:not(.is-ios) .custom-scroll::-webkit-scrollbar {
   transition: 0.15s ease-in-out transform;
 }
 .MenuItem.destructive,
-.MenuItem.destructive i {
+.MenuItem.destructive i,
+.MenuItem.destructive .icon {
   color: var(--color-error);
 }
-.MenuItem i {
+.MenuItem i,
+.MenuItem .icon {
   font-size: 1.5rem;
   margin-right: 2rem;
   color: var(--color-icon-secondary);
 }
-.MenuItem.compact i {
+.MenuItem.compact i,
+.MenuItem.compact .icon {
   max-width: 1.25rem;
   font-size: 1rem;
   margin-left: 0.5rem;
@@ -558,6 +569,7 @@ body:not(.is-ios) .custom-scroll::-webkit-scrollbar {
   font-size: 0.875rem;
   text-align: center;
   position: relative;
+  flex-shrink: 0;
 }
 .Tab,
 .Tab:active,
@@ -565,7 +577,8 @@ body:not(.is-ios) .custom-scroll::-webkit-scrollbar {
   outline: none;
 }
 .TabList .slick-current .Tab,
-.RightColumn__TabList .slick-current .Tab {
+.RightColumn__TabList .slick-current .Tab,
+.TabList .tab-active {
   cursor: default;
   color: var(--color-primary);
 }
@@ -584,18 +597,37 @@ body:not(.is-ios) .custom-scroll::-webkit-scrollbar {
   scrollbar-color: rgba(0, 0, 0, 0);
   z-index: 100;
 }
+
+.TabList {
+  display: flex;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+  overflow: auto;
+}
 .TabList .slick-current .Tab span,
-.RightColumn__TabList .slick-current .Tab span {
+.RightColumn__TabList .slick-current .Tab span,
+.TabList .tab-active span {
   position: relative;
 }
 .TabList .slick-current .Tab span::before,
-.RightColumn__TabList .slick-current .Tab span::before {
+.RightColumn__TabList .slick-current .Tab span::before,
+.TabList .tab-active span::before,
+.RightColumn__TabList .tab-active span::before {
   position: absolute;
   content: "";
   width: 100%;
   height: 0.1875rem;
   background-color: var(--color-primary);
   bottom: -0.6875rem;
+}
+.Tab-content {
+  padding-top: 5px;
+}
+.Tab-pane {
+  display: none;
+}
+.Tab-pane.pane-active {
+  display: block;
 }
 .recent-top__item {
   display: inline-block;
@@ -643,6 +675,7 @@ body:not(.is-ios) .custom-scroll::-webkit-scrollbar {
   scrollbar-width: none;
   scrollbar-color: rgba(0, 0, 0, 0);
   margin-bottom: 0.5rem;
+  padding: 0 5px;
 }
 .recent-second__heading {
   display: flex;
@@ -653,6 +686,11 @@ body:not(.is-ios) .custom-scroll::-webkit-scrollbar {
   font-size: 0.9375rem;
   font-weight: 500;
   padding: 1.25rem 0 1rem 1.25rem;
+}
+
+.recent-second__content {
+  overflow: scroll;
+  max-height: calc(100vh - 300px);
 }
 .recent-second__close {
   font-size: 1.25rem;
@@ -792,7 +830,8 @@ body:not(.is-ios) .custom-scroll::-webkit-scrollbar {
   transition: transform var(--layer-transition);
 }
 
-.hearder-tool-item i {
+.hearder-tool-item i,
+.hearder-tool-item .icon {
   font-size: 1.5rem;
   background-color: transparent;
   color: var(--color-text-secondary);
@@ -1420,13 +1459,17 @@ svg:not(:root) {
   cursor: pointer;
 }
 .RightColumn__ChatExtra .ListItem .ListItem-button > i,
-.LeftColumn__ChatExtra .ListItem .ListItem-button > i {
+.LeftColumn__ChatExtra .ListItem .ListItem-button > i,
+.RightColumn__ChatExtra .ListItem .ListItem-button > .icon,
+.LeftColumn__ChatExtra .ListItem .ListItem-button > .icon {
   font-size: 1.5rem;
   margin-right: 2rem;
   color: var(--color-text-secondary);
 }
 .RightColumn__ChatExtra .ListItem.multiline .ListItem-button > i,
-.LeftColumn__ChatExtra .ListItem.multiline .ListItem-button > i {
+.LeftColumn__ChatExtra .ListItem.multiline .ListItem-button > i,
+.RightColumn__ChatExtra .ListItem.multiline .ListItem-button > .icon,
+.LeftColumn__ChatExtra .ListItem.multiline .ListItem-button > .icon {
   position: relative;
   top: 0.25rem;
 }
@@ -1707,12 +1750,14 @@ label {
 .ListItem:not(.disabled):not(.is-static) .ListItem-button {
   cursor: pointer;
 }
-.ListItem .ListItem-button > i {
+.ListItem .ListItem-button > i,
+.ListItem .ListItem-button > .icon {
   font-size: 1.5rem;
   margin-right: 2rem;
   color: var(--color-text-secondary);
 }
-.ListItem.destructive .ListItem-button i {
+.ListItem.destructive .ListItem-button i,
+.ListItem.destructive .ListItem-button .icon {
   color: inherit;
 }
 .ListItem:not(.disabled):not(.is-static) .ListItem-button:hover,
@@ -1778,12 +1823,14 @@ label {
 .AvatarEditable label input {
   display: none;
 }
-.AvatarEditable label i {
+.AvatarEditable label i,
+.AvatarEditable label .icon {
   transform: scale(1);
   transition: transform .15s linear;
   z-index: var(--z-register-add-avatar);
 }
-.AvatarEditable label:hover i {
+.AvatarEditable label:hover i,
+.AvatarEditable label:hover .icon {
   transform: scale(1.2);
 }
 .AvatarEditable label img {
@@ -2057,7 +2104,8 @@ label {
   padding-left: 0.75rem;
   padding-right: 1.25rem;
 }
-.Button.smaller.with-icon i {
+.Button.smaller.with-icon i,
+.Button.smaller.with-icon .icon {
   font-size: 1rem;
   margin-right: 0.5rem;
 }

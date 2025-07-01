@@ -620,23 +620,42 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     // slide tab list
     slideTabList: function () {
-      $(".TabList").not(".slick-initialized").slick({
-        slidesToShow: 6,
-        slidesToScroll: 1,
-        arrows: false,
-        asNavFor: ".Tab-content",
-        focusOnSelect: true,
-        infinite: false,
-      });
-      $(".Tab-content").not(".slick-initialized").slick({
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        asNavFor: ".TabList",
-        infinite: false,
-        dots: false,
-        fade: true,
-        arrows: false,
-      });
+      // $(".TabList").not(".slick-initialized").slick({
+      //   slidesToShow: 6,
+      //   slidesToScroll: 1,
+      //   arrows: false,
+      //   asNavFor: ".Tab-content",
+      //   focusOnSelect: true,
+      //   infinite: false,
+      //   swipe: false,
+      //   ouchMove: false, 
+      // });
+      // $(".Tab-content").not(".slick-initialized").slick({
+      //   slidesToShow: 1,
+      //   slidesToScroll: 1,
+      //   asNavFor: ".TabList",
+      //   infinite: false,
+      //   dots: false,
+      //   fade: true,
+      //   arrows: false,
+      //   swipe: false,
+      //   touchMove: false,
+      // });
+
+      const tabItems = document.querySelectorAll(".js__tabItem");
+  const tabContents = document.querySelectorAll(".js__tabPane");
+
+  tabItems.forEach((tab, index) => {
+    tab.addEventListener("click", () => {
+      // Bỏ active tất cả tab và nội dung
+      tabItems.forEach(t => t.classList.remove("tab-active"));
+      tabContents.forEach(c => c.classList.remove("pane-active"));
+
+      // Active tab và nội dung tương ứng
+      tab.classList.add("tab-active");
+      tabContents[index].classList.add("pane-active");
+    });
+  });
     },
     // slide tab list profile
     slideTabListProfile: function () {
